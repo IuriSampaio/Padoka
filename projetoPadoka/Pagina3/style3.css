@@ -9,6 +9,7 @@
     --detalhes:blueviolet;
     --txt-principal:aliceblue;
 }
+
 body::-webkit-scrollbar{
     width: 30px;
 }
@@ -29,9 +30,46 @@ body::-webkit-scrollbar-thumb{
 
 
 @media screen and (max-device-width:780px){
-       /* menu MOBILE */
+
+.col-md-6{
+    width: 100%;
+    float: left;
+}
+    .font{
+    font-size: x-large;
+    font-weight: bolder;
+}
+.conteudoGG{
+    width:100%;
+}
+.cadastro{
+    margin-top: 100px;
+    width: 100%;
+   
+}
+.float{
+    float: left;
+}
+.btn{
+    margin-top: 30px;
+}
+.tituloFale{
+    width: 100%;
+    font-weight: bolder;
+    background-color: rgba(232, 224, 236, 0.442);
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding-top: 7px;
+    height: 50px;
+    text-align: center;
+    margin: 30px;
+    margin-left: 0px;
+    font-size: xx-large;
+}
+  /* menu MOBILE */
 #produtosDesk, .paginas, .conteinerMenuDesk,
-.form, .btnOk, .inputs, .slide, .slide_item{
+.form, .btnOk, .inputs, .usuario,.senha{
     display: none;
 }
 .conteinerMenuMoba{
@@ -44,8 +82,9 @@ body::-webkit-scrollbar-thumb{
     width: 90px;
     height: 90px;
     float: left;
-    margin-left: -40vw;
-    margin-top: 5px;
+    position: absolute;
+    z-index: 9999;
+    margin-top: -95px;
     background-image: url(../imgs/menu.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -53,28 +92,28 @@ body::-webkit-scrollbar-thumb{
 #menuMoba{
     width: 100%;
     margin-left: -40vw;
-    margin-top: 100px;
+    margin-top: 0px;
     height: 100%;
-    position: absolute;
     background-color:rgba(162, 0, 255, 0.842);
     position: fixed;
-    z-index: 999;
+    z-index: 999 ;
     display: none;
 }
 .itemMenu{
     width: 100%;
     margin-top: 20px;
     height: 150px;
+    font-weight: 900;
     text-align: center;
     color: white;
     list-style: none;
     font-size: 50px;
 }
 
-.logo{
+.logo>img{
     width: 190px;
     height: 90px;
-    float: left;
+    float: center;
     margin-top: 5px;
     /* background-image: url(../logo.png); */
     background-repeat: no-repeat;
@@ -108,28 +147,72 @@ body::-webkit-scrollbar-thumb{
     margin-left: 4%;
     margin-top: 4%;
 }
-.mostrafotos{
-    display: none;
+
+
+/* produtos */
+.produtosGG{
+    width: 100%;
+    height: auto;
+    /* position: fixed; */
 }
-.imglateral, .imglateral1, .imglateral2{
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    display: none;
-    margin-top: 10px;
-    margin-left: 20px;
+.produtosG{
+    width: 99.39%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    height: auto;
+    /* border: solid 2px black; */
+    float: left;
+    text-align: center;
+}
+
+#produtosMoba{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+td{
+    max-width:100%;
+    min-width: auto;
+    font-size: 25px;
+    max-height: 800px;
+    min-height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.foto{
+    width: 40vw;
+    height: 28vh;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-right: auto;
+    border: var(--bg-segundario) 2px solid;
+}
+.detalhes{
+    float: right;
+    margin-left: 50%;
+    margin-right: 10%;
+    width: 33vw;
+    height: 5vh;
+    margin-bottom: 1vh;
+    font-size: 25px;
+    margin-top: 1vh;
+    background-color: var(--detalhes);
+    color: var(--txt-principal);
 }
 .rodape{
-    width: 100%;
-    height: 100px; 
-    background-color: var(--bg-principal);
+   width: 100%;
+   height: 100px; 
+   background-color: var(--bg-principal);
+   float: left;
+   color:var(--txt-principal) ;
+}
+.sistema{
     float: left;
-    color:var(--txt-principal) ;
- }
- .sistema{
-    float: left;
-    margin-left: 3vw;
-    margin-top: 3vh;
+ margin-top: 20px;
+ margin-left: 30px;
     width: 150px;
     height: 50px;
 }
@@ -138,7 +221,7 @@ body::-webkit-scrollbar-thumb{
 }
 .appbtn{
     margin-right: 60px;
-    margin-top: 40px;
+    margin-top: 20px;
     height: 50px;
     width: 150px;
 }
@@ -146,9 +229,26 @@ body::-webkit-scrollbar-thumb{
     margin-left: auto;
     margin-right: auto;
 }
+
+
+body{
+
+    background-image: url("./images/cadastroFundo.jpg");
+} 
 }
 
 @media screen and (min-device-width:780px){
+    body{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-clip: border-box;
+        background-image: url("./images/cadastroFundo.jpg");
+    }
+ 
+    .conteinerMenuMoba{
+        display: none;
+    }
+
     .conteinerCabecalhomini{
         display: flex;
         background-color: #23232e;
@@ -160,17 +260,18 @@ body::-webkit-scrollbar-thumb{
         justify-content: center;
      
     }
-    .logo{
+    .logo>img{
         width: 150px;
         height: 70px;
         margin-top: 10px;
         float: left;
     }
     /* menu */
-    .conteinerMenu{
+    .conteinerMenuDesk{
         width: 800px;
         height: 60px;
         margin-left: 30px;
+        margin-right: 40px;
         float: left;
     }
     .itemMenu{
@@ -253,18 +354,14 @@ body::-webkit-scrollbar-thumb{
         float: left;
     }
     .imglateral{
-        width: 100px;
-        height: 100px;
-        position: fixed;
-        margin-top: 10px;
-        margin-left: 20px;
+        display: none;
     }
     
     .rodape{
-       width: 1500px;
-       float: left;
-       height: 200px; 
-       background-color: dimgray;
+       width:100%;
+
+       height: 150px; 
+       background-color: var(--bg-principal);
     }
     .sistema{
         float: left;
@@ -308,5 +405,35 @@ body::-webkit-scrollbar-thumb{
         margin-bottom: auto;
     }
     
-    
+    .cadastro{
+        width: 100%;
+        height: 700px;
+    }
+    .tituloFale{
+        width: 100%;
+        height: 40px;
+        border-radius: 30px;
+        margin: 30px;
+        font-size: 30px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(232, 224, 236, 0.442)
+    }
+    .form2{
+        width: 70%;
+        margin: auto;
+    }
+    .top{
+        margin-top: 10px;
+    }
+    .enviar:hover{
+        height: 50px;
+        width: 70%;
+        margin-left: 15%;
+        background-color: var(--bg-segundario);
+        color: white;
+        font-size: large;
+        transition: 500ms;
+    }
 }

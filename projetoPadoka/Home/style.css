@@ -19,6 +19,7 @@ body::-webkit-scrollbar-track{
 body::-webkit-scrollbar-thumb{
     background: var(--detalhes);
 }
+
 /* CABEÇALHO */
 /* estrutura cabeçalho */
 .conteinerCabecalho{
@@ -312,6 +313,12 @@ td{
     transition: 1s;
     display: block;
 }
+.imglateral1>img{
+    margin-top: -100px;
+}
+.imglateral2>img{
+    margin-top: 100px;
+}
 /* login */
 .conteinerForm{
     width: 600px;
@@ -416,12 +423,9 @@ img{
     height: 500px;
     float: left;
 }
-.imglateral{
+.imglateral>img, .imglateral1>img, .imglateral2>img{
     width: 100px;
     height: 100px;
-    position: fixed;
-    margin-top: 10px;
-    margin-left: 20px;
 }
 
 /* produtos */
@@ -519,7 +523,7 @@ td{
     margin-right: 10px;;
 }
 .rodape{
-   width: 1505px;
+   width: 100%;
    height: 200px; 
    background-color: var(--bg-principal);
    color:var(--txt-principal) ;
