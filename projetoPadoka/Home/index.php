@@ -13,8 +13,8 @@
                 <!-- Menu DESKTOP-->
             <nav class="conteinerMenuDesk">
                 <div class="itemMenu"><a href="../Home/index.php">HOME</a></div>
-                <div class="itemMenu"><a href="../Pagina2/index2.php">QUEM</a></div>
-                <div class="itemMenu"><a href="../Pagina3/index3.php">ALGO</a></div>
+                <div class="itemMenu"><a href="../Pagina2/index2.php">QUEM SOMOS</a></div>
+                <div class="itemMenu"><a href="../Pagina3/index3.php">FALE CONOSCO</a></div>
         
             </nav>
                 <!-- Menu MOBILE --> 
@@ -24,8 +24,8 @@
                 <div id="menuMoba">
                 <ul>
                     <li class="itemMenu"><a href="../Home/index.php">HOME</a></li>
-                    <li class="itemMenu"><a href="../Pagina2/index2.php">QUEM</a></li>
-                    <li class="itemMenu"><a href="../Pagina3/index3.php">ALGO</a></li>
+                    <li class="itemMenu"><a href="../Pagina2/index2.php">QUEM SOMOS</a></li>
+                    <li class="itemMenu"><a href="../Pagina3/index3.php">FALE CONOSCO</a></li>
             
                 </ul>
                 </div>
