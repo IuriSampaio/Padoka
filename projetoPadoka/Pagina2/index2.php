@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
         <meta charset="UTF-8">
         <title>Padoka</title>
     </head>
-    <link rel="stylesheet" href="./style2.css">
+    <link rel="stylesheet" href="./style/style2.css">
    
 <body>
     <!-- Cabeçalho -->
@@ -13,9 +14,11 @@
         <figure class="logo"><img src="../imgs/logo.png" alt="pani" ></figure>
             <!-- Menu DESKTOP-->
         <nav class="conteinerMenuDesk">
-            <div class="itemMenu"><a href="../Home/index.php">HOME</a></div>
-            <div class="itemMenu"><a href="../Pagina2/index2.php">QUEM SOMOS</a></div>
-            <div class="itemMenu"><a href="../Pagina3/index3.php">FALE CONOSCO</a></div>
+            <div class="itemMenu"><a href="../Home/index.php">Home</a></div>
+            <div class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></div>
+            <div class="itemMenu"><a href="../">Curiosidades</a></div>
+            <div class="itemMenu"><a href="../">Nossas Lojas</a></div>
+            <div class="itemMenu"><a href="../Pagina3/index3.php">Fale Conosco</a></div>
 
         </nav>
             <!-- Menu MOBILE --> 
@@ -24,9 +27,11 @@
         <div id="iconeMenu"></div>
             <div id="menuMoba">
             <ul>
-                <li class="itemMenu"><a href="../Home/index.php">HOME</a></li>
-                <li class="itemMenu"><a href="../Pagina2/index2.php">QUEM SOMOS</a></li>
-                <li class="itemMenu"><a href="../Pagina3/index3.php">FALE CONOSCO</a></li>
+                    <li class="itemMenu"><a href="../Home/index.php">Home</a></li>
+                    <li class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></li>
+                    <li class="itemMenu"><a href="../">Curiosidades</a></li>
+                    <li class="itemMenu"><a href="../">Nossas Lojas</a></li>
+                    <li class="itemMenu"><a href="../Pagina3/index3.php">Fale conosco</a></li>
 
             </ul>
             </div>
@@ -67,8 +72,10 @@
                     <?php endfor; ?>
                 </div>
                     <section class="quem">
-                        <figure class="imagem"></figure> 
-                            <!-- <img src="/images/fundo1.png" alt="im"> -->
+                        <figure class="imagem">
+                            
+                        </figure> 
+                             
                         
                             <div class="texto">
                                 <h3>História do nosso comercial</h3>
@@ -124,8 +131,8 @@
                             <input type="button" value="Baixe Nosso App" class="appbtn">
                     </div>
             </footer>
-    <script src="./jquery.js"></script>
-    <script src="./main.js"></script>
+    <script src="./JS/jquery.js"></script>
+    <script src="./JS/main.js"></script>
     <script>
         // o $ significa a abraveiação de JQuerry
         $(document).ready(function(){

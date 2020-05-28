@@ -30,12 +30,7 @@ body::-webkit-scrollbar-thumb{
 
 
 @media screen and (max-device-width:780px){
-
-.col-md-6{
-    width: 100%;
-    float: left;
-}
-    .font{
+.font{
     font-size: x-large;
     font-weight: bolder;
 }
@@ -73,7 +68,7 @@ body::-webkit-scrollbar-thumb{
     display: none;
 }
 .conteinerMenuMoba{
-    width: 100px;
+    width: 100%;
     height: inherit;
     position: fixed;
     
@@ -85,13 +80,12 @@ body::-webkit-scrollbar-thumb{
     position: absolute;
     z-index: 9999;
     margin-top: -95px;
-    background-image: url(../imgs/menu.png);
+    background-image: url(../images/menu.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 #menuMoba{
     width: 100%;
-    margin-left: -40vw;
     margin-top: 0px;
     height: 100%;
     background-color:rgba(162, 0, 255, 0.842);
@@ -204,6 +198,7 @@ td{
 }
 .rodape{
    width: 100%;
+   margin-top: 20px;
    height: 100px; 
    background-color: var(--bg-principal);
    float: left;
@@ -233,8 +228,60 @@ td{
 
 body{
 
-    background-image: url("./images/cadastroFundo.jpg");
+    background-image: url("../images/cadastroFundo.jpg");
 } 
+
+ /* Formulario Mobile */
+ .linha{
+    width: 99%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    margin: 55px;
+}
+.coluna-2{
+    width: 90%;
+    margin: 5%;
+    float: left;
+    height: inherit;
+}
+.coluna-3{
+    width: 89%;
+    margin: 5%;
+    float: left;
+    height: inherit;
+}
+label{
+    float: left;
+    color: var(--detalhes);
+    font-weight: bolder;
+    font-size: x-large;
+}
+input, select, textarea{
+    width: 100%;
+    margin: 30px;
+    text-align: center;
+    margin: 10px;
+    height: 40px;
+    float: right;
+    border-radius: 20px;
+    box-shadow: black black pink rgba(232, 224, 236, 0.942);
+}
+textarea{
+    height: 80px;
+}
+.dt{
+    height: 40px;
+}
+.enviar:hover{
+    height: 70px;
+    width: 100%;
+    background-color: var(--bg-segundario);
+    color:var(--txt-principal);
+    font-size: large;
+    transition: 500ms;
+}
+
 }
 
 @media screen and (min-device-width:780px){
@@ -242,7 +289,7 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
         background-clip: border-box;
-        background-image: url("./images/cadastroFundo.jpg");
+        background-image: url("../images/cadastroFundo.jpg");
     }
  
     .conteinerMenuMoba{
@@ -281,16 +328,18 @@ body{
         background-color: #23232e;
         border-radius: 10px;
         margin: 10px;
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
         font-family: Arial;
         color: white;
         display: block;
-        padding-top: 10px;
+        padding-top: 0px;
     }
     .itemMenu:hover{
         background-color: darkgray;
         color: black;
+        height: 55px;
+        width: 150px ;
         cursor: pointer;
         transition: 1s;
         display: block;
@@ -427,13 +476,55 @@ body{
     .top{
         margin-top: 10px;
     }
+    /* Formulario DESKTOP */
+    .linha{
+        width: 100%;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        margin: 60px;
+    }
+    .coluna-2{
+        width: 47%;
+        margin: 1%;
+        float: left;
+        height: inherit;
+    }
+    .coluna-3{
+        width: 30%;
+        margin: 1%;
+        float: left;
+        height: inherit;
+    }
+    label{
+        float: left;
+        font-weight: bolder;
+        font-size: large;
+    }
+    input, select, textarea{
+        width: 100%;
+        margin: 30px;
+        text-align: center;
+        margin: 10px;
+        height: 40px;
+        float: right;
+        border-radius: 20px;
+        box-shadow: black black pink rgba(232, 224, 236, 0.942);
+    }
+    textarea{
+        height: 80px;
+    }
+    .dt{
+        height: 40px;
+    }
     .enviar:hover{
         height: 50px;
         width: 70%;
-        margin-left: 15%;
+        margin-left: 35px;
         background-color: var(--bg-segundario);
         color: white;
         font-size: large;
         transition: 500ms;
     }
+   
 }

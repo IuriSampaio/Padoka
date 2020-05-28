@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Padoka</title>
     </head>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <body>
         <!-- Cabeçalho -->
         <header class="conteinerCabecalho">
@@ -12,9 +12,11 @@
                 <figure class="logo"><img src="../imgs/logo.png" alt="pani" ></figure>
                 <!-- Menu DESKTOP-->
             <nav class="conteinerMenuDesk">
-                <div class="itemMenu"><a href="../Home/index.php">HOME</a></div>
-                <div class="itemMenu"><a href="../Pagina2/index2.php">QUEM SOMOS</a></div>
-                <div class="itemMenu"><a href="../Pagina3/index3.php">FALE CONOSCO</a></div>
+                <div class="itemMenu"><a href="../Home/index.php">Home</a></div>
+                <div class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></div>
+                <div class="itemMenu"><a href="../">Curiosidades</a></div>
+                <div class="itemMenu"><a href="../">Nossas Lojas</a></div>
+                <div class="itemMenu"><a href="../Pagina3/index3.php">Fale conosco</a></div>
         
             </nav>
                 <!-- Menu MOBILE --> 
@@ -23,9 +25,11 @@
             <div id="iconeMenu"></div>
                 <div id="menuMoba">
                 <ul>
-                    <li class="itemMenu"><a href="../Home/index.php">HOME</a></li>
-                    <li class="itemMenu"><a href="../Pagina2/index2.php">QUEM SOMOS</a></li>
-                    <li class="itemMenu"><a href="../Pagina3/index3.php">FALE CONOSCO</a></li>
+                    <li class="itemMenu"><a href="../Home/index.php">Home</a></li>
+                    <li class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></li>
+                    <li class="itemMenu"><a href="../">Curiosidades</a></li>
+                    <li class="itemMenu"><a href="../">Nossas Lojas</a></li>
+                    <li class="itemMenu"><a href="../Pagina3/index3.php">Fale conosco</a></li>
             
                 </ul>
                 </div>
@@ -49,6 +53,7 @@
                 <!-- CONTEUDO -->
                 <div class="conteudoGG">   
                     <!-- <img src="images/01.jpg" class="imgMobile" alt="padaria"> -->
+                    <figure class="subtituto"></figure>
                     <div class="slide">            
                     <div class="slide_nav">
                         <div class="slide_nav_item b"> >> </div>
@@ -69,9 +74,9 @@
                     <div class="produtosGG">
                         <div class="produtosG">
                             <div class="paginas">
-                            <div class="pags">Pagina</div>
-                            <div class="pags">Pagina</div>
-                            <div class="pags">Pagina</div>
+                            <div class="pags">Produtos</div>
+                            <div class="pags">Promoções</div>
+                            <div class="pags">Produto do mês</div>
                             </div>
                             <div class="produtos">
                                 <table id="produtosMoba">
@@ -234,8 +239,8 @@
                         <input type="button" value="Baixe Nosso App" class="appbtn">
                 </div>
         </footer>
-    <script src="jquery.js"></script>
-    <script src="main.js">
+    <script src="JS/jquery.js"></script>
+    <script src="JS/main.js">
     </script>
     <script>
         // o $ significa a abraveiação de JQuerry

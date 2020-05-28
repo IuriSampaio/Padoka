@@ -54,11 +54,20 @@ body::-webkit-scrollbar-thumb{
 @media screen and (max-device-width:780px){
 /* menu MOBILE */
 #produtosDesk, .paginas, .conteinerMenuDesk,
-.form, .btnOk, .inputs{
+.form, .btnOk, .inputs,.slide{
     display: none;
 }
+.subtituto{
+    width: 100%;
+    margin-top: 100px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/03.jpg);
+    border-radius: 20px;
+}
 .conteinerMenuMoba{
-    width: 100px;
+    width: 100%;
     height: inherit;
     position: fixed;
     
@@ -67,15 +76,13 @@ body::-webkit-scrollbar-thumb{
     width: 90px;
     height: 90px;
     float: left;
-    margin-left: -40vw;
     margin-top: 5px;
-    background-image: url(../imgs/menu.png);
+    background-image: url(../images/menu.png);
     background-repeat: no-repeat;
     background-position: center;
 }
 #menuMoba{
     width: 100%;
-    margin-left: -40vw;
     margin-top: 100px;
     height: 100%;
     background-color:rgba(162, 0, 255, 0.842);
@@ -83,9 +90,11 @@ body::-webkit-scrollbar-thumb{
     z-index: 0  ;
     display: none;
 }
+
 .itemMenu{
     width: 100%;
     margin-top: 20px;
+    font-weight: bolder;
     height: 150px;
     text-align: center;
     color: white;
@@ -299,7 +308,7 @@ td{
     background-color: #23232e;
     border-radius: 10px;
     margin: 10px;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     font-family: Arial;
     color: white;
@@ -312,13 +321,9 @@ td{
     cursor: pointer;
     transition: 1s;
     display: block;
+    height: 60px;
 }
-.imglateral1>img{
-    margin-top: -100px;
-}
-.imglateral2>img{
-    margin-top: 100px;
-}
+
 /* login */
 .conteinerForm{
     width: 600px;
@@ -426,6 +431,7 @@ img{
 .imglateral>img, .imglateral1>img, .imglateral2>img{
     width: 100px;
     height: 100px;
+    float: right;
 }
 
 /* produtos */
@@ -477,6 +483,7 @@ img{
 .pags:hover{
     opacity: 5;
     transition: 1s;
+    font-size: x-large;
     background-color: var(--bg-principal);
     display: -moz-inline-stack;
     cursor:pointer;
@@ -548,5 +555,9 @@ td{
     margin-left: 350px;
     margin-bottom: 170px;
 }
-
+.ladoDireito{
+    float: right;
+    height: 100%;
+    background-color: aqua;
+}
 }

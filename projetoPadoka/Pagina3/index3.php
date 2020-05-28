@@ -6,25 +6,35 @@
     if(isset($_POST['btnSalvar'])){
 
             $nome = $_POST['nome'];
+            $nascimento = explode("/",$_POST['dataNasc']);
             $cep = $_POST['cep'];
+            $idEstado = $_POST['estados'];
             $bairro = $_POST['bairro'];
             $cidade = $_POST['cidade'];
-            $email = $_POST['email'];
+            $facebook = $_POST['face'];
             $url = $_POST['url'];
-            $nascimento = explode("/",$_POST['dataNasc']);
-            $nascimentoAmericano = $nascimento[2]."-".$nascimento[1]."-".$nascimento[0];
+            $telefone = $_POST['tel'];
+            $celular = $_POST['cel'];
+            $email = $_POST['email'];
+            $idsexo = $_POST['slcSex'];
+            $profisao = $_POST['profisao'];
+            $tipoMsg = $_POST[ 'slcSugCri'];
             $critica = $_POST['critica'];
-            $idEstado = $_POST['estados'];
 
+            //mascarando o nascimento
+            $nascimentoAmericano = $nascimento[2]."-".$nascimento[1]."-".$nascimento[0];
 
-            $sqli = "insert into criticas values (Default,'".$nome."',
-            '".$nascimentoAmericano."',".$idEstado.",'".$cep."','".$bairro."',
-            '".$cidade."','".$url."','".$email."','".$critica."' )";
-            //     echo($sqli);
+            
+
+            $sqli = "insert into tbl_criticas values (Default,'".$nome."',
+            '".$nascimentoAmericano."','".$cep."','".$idEstado."','".$bairro."',
+            '".$cidade."','".$facebook."','".$url."','".$telefone."','".$celular."','".$email."',
+            '".$idsexo."','".$profisao."','".$tipoMsg."','".$critica."' )";
+                 
             if(mysqli_query($conex,$sqli))
                  echo("<script> console.log('inserido com suscesso') </script>");
              else
-                 echo("<script> alert('erro') </script>");
+                 echo($sqli."<script> alert('erro') </script>");
         
     }
 ?>
@@ -32,11 +42,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=0"> -->
         <meta charset="UTF-8">
         <title>Padoka</title>
     </head>
-    <link rel="stylesheet" href="./style3.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style3.css">
     <script src="./main.js"></script>
 <body>
     <!-- Cabeçalho -->
@@ -45,9 +55,11 @@
         <figure class="logo"><img src="../imgs/logo.png" alt="pani" ></figure>
             <!-- Menu DESKTOP-->
         <nav class="conteinerMenuDesk">
-            <div class="itemMenu"><a href="../Home/index.php">HOME</a></div>
-            <div class="itemMenu"><a href="../Pagina2/index2.php">QUEM SOMOS</a></div>
-            <div class="itemMenu"><a href="../Pagina3/index3.php">FALE CONOSCO</a></div>
+            <div class="itemMenu"><a href="../Home/index.php">Home</a></div>
+            <div class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></div>
+            <div class="itemMenu"><a href="../">Curiosidades</a></div>
+            <div class="itemMenu"><a href="../">Nossas Lojas</a></div>
+            <div class="itemMenu"><a href="../Pagina3/index3.php">Fale conosco</a></div>
         
         </nav>
             <!-- Menu MOBILE --> 
@@ -56,9 +68,11 @@
         <div id="iconeMenu"></div>
             <div id="menuMoba">
             <ul>
-                <li class="itemMenu"><a href="../Home/index.php">HOME</a></li>
-                <li class="itemMenu"><a href="../Pagina2/index2.php">QUEM SOMOS</a></li>
-                <li class="itemMenu"><a href="../Pagina3/index3.php">FALE CONOSCO</a></li>
+                    <li class="itemMenu"><a href="../Home/index.php">Home</a></li>
+                    <li class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></li>
+                    <li class="itemMenu"><a href="../">Curiosidades</a></li>
+                    <li class="itemMenu"><a href="../">Nossas Lojas</a></li>
+                    <li class="itemMenu"><a href="../Pagina3/index3.php">Fale conosco</a></li>
         
             </ul>
             </div>
@@ -85,64 +99,111 @@
                     <div class="tituloFale">
                             Fale Conosco
                     </div>
-                        <form action="index3.php" method="post" class ="form-group form2">
-                            <div class="row">
+                        <form action="index3.php" method="post" class ="formulario">
+                            <div class="linha">
                             <label for="form-control" class="font">Nome:</label>
-                            <input type="text" name="nome" placeholder="Digite seu nome" class="form-control" required>
+                            <input type="text" name="nome" placeholder="Digite seu nome" required>
                             </div>
-                            <div class="row top">
-                                <div class="col-md-6">
-                                    <div class="form-group">
+                            <div class="linha">
+                                <div class="coluna-2">
+                                    <div>
                                         <label for="form-control" class="font">Data de Nascimento:</label>
-                                        <input type="text" name="dataNasc" class="form-control" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )">
+                                        <input type="text" name="dataNasc" class="dt" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )">
                                     </div> 
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form">
+                                <div class="coluna-2">
+                                    <div>
                                         <label for="form-control" class="font">CEP:</label>
-                                        <input type="text" name = "cep" placeholder="Digite seu CEP" class="form-control" id ='cep'>
+                                        <input type="text" name = "cep" placeholder="Digite seu CEP" class="dt" id ='cep'>
                                     </div>
                                 </div>
                             </div>
                         
-                            <div class="row top">
-                                <div class="col-md-4">
+                            <div class="linha">
+                                <div class="coluna-3">
                                     <label for="" class="font">Estado:</label>
-                                    <select name="estados" id="estados" class="form-control" id="estado">
+                                    <select name="estados" id="estados" id="estado">
                                         <option value="" selected >Selecione um estado</option>
                                         <?php
                                         $sql = "select * from estados orderbyname" ;
                                         $selecionaEstados = mysqli_query($conex,$sql) ;
-                                while( $rsEstados = mysqli_fetch_assoc($selecionaEstados)){
-                            ?>
-                                <option value="<?=$rsEstados['idEstado']?>"><?=$rsEstados['nome']?></option>
-                            <?php } ?>
+                                            while( $rsEstados = mysqli_fetch_assoc($selecionaEstados)){?>
+                                        <option value="<?=$rsEstados['idEstado']?>"><?=$rsEstados['nome']?></option>
+                                            <?php } ?>
                                     </select>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="coluna-3">
                                     <label for=""class="font">Bairro:</label>
-                                    <input type="text" name= "bairro" placeholder="Digite seu bairro" class="form-control" id ="bairro">
+                                    <input type="text" name= "bairro" placeholder="Digite seu bairro" id ="bairro">
                                 </div>
-                                <div class="col-md-4">
+                                <div class="coluna-3">
                                     <label for="" class="font">Cidade:</label>
-                                    <input type="text" name= "cidade" placeholder="digite sua cidade" class=form-control id ="cidade">
+                                    <input type="text" name= "cidade" placeholder="digite sua cidade"id ="cidade">
                                 </div>
                             </div>
-                            <div class="row top">
-                                <label for="url" class="font">Digite sua URL:</label>
-                            <input type="url" name="url"placeholder="Digite a url do seu site" class="form-control">
+                            <div class="linha">
+                                <label for="url" class="font">Digite o link do facebook:</label>
+                                <input type="url" name="face"placeholder="http://....">
                             </div>
-                            <div class="row top">
-                                <label for="email" class="font">Digite seu email:</label>
-                            <input type="mail" name="email" placeholder="Digite seu email" class="form-control" required>
+                            <div class="linha">
+                                <label for="url" class="font">Homepage:</label>
+                                <input type="url" name="url"placeholder="http://....">
                             </div>
+                            <div class="linha">
+                                <div class="coluna-2">
+                                    <div>
+                                        <label for="form-control" class="font">Telefone:</label>
+                                        <input type="text" name="tel" placeholder="5555-5555" class="dt" id="outra_data" maxlength="13">
+                                    </div> 
+                                </div>
+                                <div class="coluna-2">
+                                    <div>
+                                        <label for="form-control" class="font">Celular:</label>
+                                        <input type="text"name="cel" placeholder="95555-5555" class="dt" maxlength="14" >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="linha">
+                                <label for="email" class="font">E-mail</label>
+                                <input type="mail" name="email" placeholder="Digite seu email"  required>
+                            </div>
+                            <div class="linha">
+                                <div class="coluna-2">
+                                    <label for="slcSex">Escolha seu sexo</label>
+                                    <div>
+                                    <select name="slcSex" id="slcSex">
+                                    <option value ="#" type="text" selected> Escolha seu sexo</option>
+                                        <?php
+                                        $sql = "select * from tbl_sexo orderbyname" ;
+                                        $selecionaSexo = mysqli_query($conex,$sql) ;
+                                            while( $rsSexo = mysqli_fetch_assoc($selecionaSexo)){?>
+                                        <option value="<?=$rsSexo['idSexo']?>"><?=$rsSexo['nomeSexo']?></option>
+                                            <?php } ?>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="coluna-2">
+                                    <label for="profisao">Profisão</label>
+                                    <input type="text" name="profisao" placeholder="digite sua profisão" id="profisão">
+                                </div>
                                 
-                            <div class="row top">
-                                <label for="comment" class="font">Comentario ou crítica:</label>
-                                    <textarea class="form-control" name="critica" rows="5" id="comment" placeholder="faça um comentario ou critica sobre a sua experiencia ao visitar o site ou a nossa padaria" required></textarea>
                             </div>
-                            <div class="row">
-                        <input type="submit" name="btnSalvar"class="btn top form-control enviar">
+                            <div class="linha">
+                                <label for="slcSugCri">Sugestão ou Critica</label>
+                                <select name="slcSugCri" id="slcSugCri">
+                                    <option value ="#" type="text" selected>Escolha se deseja fazer uma sugestão,
+                                         critica ou candidatura á vaga de trabalho</option>
+                                    <option type="text" name="S" value="S">Sugestão</option>
+                                    <option value="C" name="C" type="text">Crítica</option>
+                                    <option value="T" name="T" type="text">Candidatura á a vaga de emprego</option>
+                                </select>
+                            </div>
+                            <div class="linha">
+                                <label for="comment" class="font">Comentarios, críticas, sugestões ou candidatura á emprego:</label>
+                                    <textarea  name="critica" rows="5" id="comment" placeholder="faça um comentario ou critica sobre a sua experiencia ao visitar o site ou a nossa padaria" required></textarea>
+                            </div>
+                            <div class="linha">
+                        <input type="submit" name="btnSalvar"class="enviar">
                     </div>
                     </form>
                     </div> 
@@ -155,8 +216,9 @@
                 </div>
             </div> 
         </div>
+    
           <!-- RODAPÉ -->
-    <footer class="rodape">
+            <footer class="rodape">
                 <input type="button" value="Sistema Interno" class="sistema">
                 <span class="endereco">
                         endereço:xxxxxxx xxxxxxxxxxxxxx xxxxxxxxx  n°xxxx
@@ -167,10 +229,10 @@
                 </div>
             </footer>
 
-<script src="./postmon.js">
+<script src="./JS/postmon.js">
     
 </script>
-<script src="jquery.js"></script>
+<script src="./JS/jquery.js"></script>
 <script>
         $(document).ready(function(){
             $('#iconeMenu').click(function(){
@@ -181,7 +243,5 @@
             })
         });
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
