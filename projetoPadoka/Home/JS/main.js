@@ -48,5 +48,20 @@ $(document).ready(function(){
             })
         }
     }
+    $('.prod').click(function(){
+        $('promoP').addClass('some');
+        $('prodM').addClass('some');
+        $('.produtao').addClass('aparece')
+    })
+    $('.promoP').click(function(){
+        $('promoP').addClass('aparece');
+        $('prodM').addClass('some');
+        $('.produtao').addClass('some')
+    })
+    $('.promoM').click(function(){
+        $('promoP').addClass('some');
+        $('prodM').addClass('aparece');
+        $('.produtao').addClass('some')
+    })
 })        
   

@@ -258,10 +258,12 @@ p{
         .itemMenu:hover{
             background-color: darkgray;
             color: black;
-            height: 65px;
             cursor: pointer;
             transition: 1s;
             display: block;
+            height: 50px;
+            width: 150px;
+            font-size: x-large;
         }
         h3{
             text-align: center;

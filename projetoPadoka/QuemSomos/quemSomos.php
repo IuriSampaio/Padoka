@@ -1,53 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-        <meta charset="UTF-8">
-        <title>Padoka</title>
-    </head>
-    <link rel="stylesheet" href="./style/style2.css">
-   
-<body>
-    <!-- Cabeçalho -->
-    <header class="conteinerCabecalho">
-        <div class="conteinerCabecalhomini">
-        <figure class="logo"><img src="../imgs/logo.png" alt="pani" ></figure>
-            <!-- Menu DESKTOP-->
-        <nav class="conteinerMenuDesk">
-            <div class="itemMenu"><a href="../Home/index.php">Home</a></div>
-            <div class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></div>
-            <div class="itemMenu"><a href="../">Curiosidades</a></div>
-            <div class="itemMenu"><a href="../">Nossas Lojas</a></div>
-            <div class="itemMenu"><a href="../Pagina3/index3.php">Fale Conosco</a></div>
-
-        </nav>
-            <!-- Menu MOBILE --> 
-        
-        <nav class="conteinerMenuMoba">
-        <div id="iconeMenu"></div>
-            <div id="menuMoba">
-            <ul>
-                    <li class="itemMenu"><a href="../Home/index.php">Home</a></li>
-                    <li class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></li>
-                    <li class="itemMenu"><a href="../">Curiosidades</a></li>
-                    <li class="itemMenu"><a href="../">Nossas Lojas</a></li>
-                    <li class="itemMenu"><a href="../Pagina3/index3.php">Fale conosco</a></li>
-
-            </ul>
-            </div>
-            
-        </nav>
-            <!-- login -->
-        <div class="conteinerForm">
-            <form action="index.html" method="post" class="form">
-                <div class="usuario"> Usuario:<br> <input type="text" name="usuario" class="inputs"></div>
-                <div class="senha">Senha:<br> <input type="password" name="senha" class="inputs"></div>
-                <div class="btnok"><input type="submit" value="Ok" class="btnOk"></div>
-            </form>
-        </div>
-        </div>  
-    </header>
-    <!-- HOME -->
+<?php
+        require_once('../header.php');
+?>
+<link rel="stylesheet" href="./style/style2.css">
+    <!-- Quem Somos -->
     <div class="conteinerGG">
         <div class="conteinerG">
             <!-- LADO -->

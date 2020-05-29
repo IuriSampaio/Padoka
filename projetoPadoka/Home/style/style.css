@@ -4,6 +4,9 @@
     padding: 0px;
     font-family: Arial;
 }
+body{
+    background-image: url('../images/cafeFundo.jpg');
+}
 :root{
     --bg-principal:#23232e;
     --bg-segundario:#101010;
@@ -39,7 +42,12 @@ body::-webkit-scrollbar-thumb{
     justify-content: center;
 }
 
-
+.aparece{
+    display: block;
+}
+.some{
+    display: none;
+}
 /* CONTEUDO */
 /* estrutura conteudo */
 .conteinerGG{
@@ -321,7 +329,9 @@ td{
     cursor: pointer;
     transition: 1s;
     display: block;
-    height: 60px;
+    height: 50px; 
+    width: 150px;
+    font-size: x-large;
 }
 
 /* login */

@@ -37,58 +37,13 @@
                  echo($sqli."<script> alert('erro') </script>");
         
     }
+
+
+    require_once('../header.php')
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=0"> -->
-        <meta charset="UTF-8">
-        <title>Padoka</title>
-    </head>
     <link rel="stylesheet" href="./style/style3.css">
-    <script src="./main.js"></script>
-<body>
-    <!-- Cabeçalho -->
-    <header class="conteinerCabecalho">
-        <div class="conteinerCabecalhomini">
-        <figure class="logo"><img src="../imgs/logo.png" alt="pani" ></figure>
-            <!-- Menu DESKTOP-->
-        <nav class="conteinerMenuDesk">
-            <div class="itemMenu"><a href="../Home/index.php">Home</a></div>
-            <div class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></div>
-            <div class="itemMenu"><a href="../">Curiosidades</a></div>
-            <div class="itemMenu"><a href="../">Nossas Lojas</a></div>
-            <div class="itemMenu"><a href="../Pagina3/index3.php">Fale conosco</a></div>
-        
-        </nav>
-            <!-- Menu MOBILE --> 
-        
-        <nav class="conteinerMenuMoba">
-        <div id="iconeMenu"></div>
-            <div id="menuMoba">
-            <ul>
-                    <li class="itemMenu"><a href="../Home/index.php">Home</a></li>
-                    <li class="itemMenu"><a href="../Pagina2/index2.php">Quem somos</a></li>
-                    <li class="itemMenu"><a href="../">Curiosidades</a></li>
-                    <li class="itemMenu"><a href="../">Nossas Lojas</a></li>
-                    <li class="itemMenu"><a href="../Pagina3/index3.php">Fale conosco</a></li>
-        
-            </ul>
-            </div>
-            
-        </nav>
-            <!-- login -->
-        <div class="conteinerForm">
-            <form action="index.html" method="post" class="form-inline">
-               <div class="usuario">Usuario:<br> <input type="text" name="usuario" class="inputs"></div>
-                <div class="senha">Senha:<br> <input type="password" name="senha" class="inputs"></div>
-                <div class="btnok"><input type="submit" value="Ok" class="btnOk"></div>
-            </form>
-        </div>
-        </div>  
-    </header>
-    <!-- HOME -->
+    <!-- Fale Conosco -->
         <div class="conteinerGG">
             <div class="conteinerG">
                 <!-- LADO -->
@@ -108,7 +63,7 @@
                                 <div class="coluna-2">
                                     <div>
                                         <label for="form-control" class="font">Data de Nascimento:</label>
-                                        <input type="text" name="dataNasc" class="dt" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )">
+                                        <input type="text" name="dataNasc" placeholder="ex: 31/01/2000" class="dt" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )">
                                     </div> 
                                 </div>
                                 <div class="coluna-2">
@@ -217,20 +172,9 @@
             </div> 
         </div>
     
-          <!-- RODAPÉ -->
-            <footer class="rodape">
-                <input type="button" value="Sistema Interno" class="sistema">
-                <span class="endereco">
-                        endereço:xxxxxxx xxxxxxxxxxxxxx xxxxxxxxx  n°xxxx
-                </span>
-                <div class="appGG">
-                    <figure class="app"></figure>
-                    <input type="button" value="Baixe Nosso App" class="appbtn">
-                </div>
-            </footer>
+    
 
 <script src="./JS/postmon.js">
-    
 </script>
 <script src="./JS/jquery.js"></script>
 <script>
@@ -243,5 +187,6 @@
             })
         });
 </script>
-</body>
-</html>
+<?php
+        require_once('../footer.php');
+?>
