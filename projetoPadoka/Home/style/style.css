@@ -181,6 +181,8 @@ body::-webkit-scrollbar-thumb{
 }
 td{
     max-width:100%;
+    background-color: antiquewhite;
+    box-shadow: 1px 1px 2px rgba(162, 0, 255, 0.842);
     min-width: auto;
     font-size: 25px;
     max-height: 800px;
@@ -487,6 +489,8 @@ img{
     min-height: 30px;
     margin-bottom: 5px;
     padding: 20px;
+    color: aliceblue;
+    background-color: var(--bg-segundario);
     text-align: center;
     display: block;
 }
@@ -494,6 +498,7 @@ img{
     opacity: 5;
     transition: 1s;
     font-size: x-large;
+    color: var(--detalhes);
     background-color: var(--bg-principal);
     display: -moz-inline-stack;
     cursor:pointer;
@@ -566,8 +571,51 @@ td{
     margin-bottom: 170px;
 }
 .ladoDireito{
+    width: 200px;
     float: right;
-    height: 100%;
-    background-color: aqua;
+    
+}
+.produtoMes{
+    width: 100%;
+    height: 1100px;
+    background-color: var(--bg-principal);
+}
+.produto{
+    width: 73%;
+    float: right;
+    height: auto;
+}
+.imgProduto{
+    width: 600px;
+    height: 600px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--bg-segundario);
+}
+.descrisaoProduto{
+    width: 100%;
+    margin-top: 30px;
+    height: auto;
+    text-align: center;
+}
+.nomeProduto{
+    font-size: 50px;
+}
+.preco{
+    font-size: x-large;
+}
+.numeroVendas{
+    font-size: xx-large;
+}
+.tituloProduro{
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: var(--bg-segundario);
+    color: var(--detalhes);
+    border-radius: 30px;
 }
 }

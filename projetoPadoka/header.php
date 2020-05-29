@@ -28,7 +28,7 @@
                     <li class="itemMenu"><a href="../Home/index.php">Home</a></li>
                     <li class="itemMenu"><a href="../QuemSomos/quemSomos.php">Quem somos</a></li>
                     <li class="itemMenu"><a href="../Curiosidades/curiosidades.php">Curiosidades</a></li>
-                    <li class="itemMenu"><a href="../">Nossas Lojas</a></li>
+                    <li class="itemMenu"><a href="../Curiosidades/curiosidades.php#conteinerLojas">Nossas Lojas</a></li>
                     <li class="itemMenu"><a href="../FaleConosco/faleConosco.php">Fale conosco</a></li>
             
                 </ul>

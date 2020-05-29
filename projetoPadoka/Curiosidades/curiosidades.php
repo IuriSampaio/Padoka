@@ -83,6 +83,17 @@
         </div>
     </div>
 </div>
+<script src="./JS/jquery.js"></script>
+<script>
+        $(document).ready(function(){
+            $('#iconeMenu').click(function(){
+                $('#menuMoba').fadeToggle(1000)
+            }); 
+            $('.itemMenu').click(function(){
+                $('#menuMoba').fadeOut()
+            })
+        });
+</script>
 <?php
     require_once('../footer.php');
 ?>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

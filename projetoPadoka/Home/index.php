@@ -30,18 +30,31 @@
                     <div class="produtosGG">
                         <div class="produtosG">
                             <div class="paginas">
-                            <a class="prod pags">Produtos</a>
-                            <a class="promo pags">Promoções</a>
-                            <a class="prodM pags">Produto do mês</a>
+                                <form action="index.php" method="post">
+                                   <input type="submit" class="prod pags" name="produtos" value="produtos" >
+                                </form>
+                                <form action="index.php" method="post">
+                                    <input type="submit" class="prod pags" name="prodMes" value="Produtos do Mês">
+                                </form>
+                                <form action="index.php" method="post">
+                                    <input type="submit" class="prod pags" name="promocoes" value="Promoções">
+                                </form>
                             </div>
                             <div class="produtao">
-                            <?php  require_once('./produtos.php'); ?>
-                            </div>
-                            <div class="promoP">
-
-                            </div>
-                            <div class="promoM">
-
+                                <?php
+                                    if (isset($_POST['produtos'])){
+                                        require_once('./produtos.php');
+                                    }
+                                    else if(isset($_POST['prodMes'])){
+                                        require_once('./prodMes.php');
+                                    }
+                                    else if(isset($_POST['promocoes'])){
+                                        require_once('./promocoes.php');
+                                    }else{
+                                        require_once('./produtos.php');
+                                    }
+                                  
+                                ?>
                             </div>
                         </div>
                         <!-- RODAPÉ -->
@@ -50,9 +63,9 @@
                 </div>
                 <!-- LADO -->
                 <div class="ladoDireito">
-                        <figure class="imglateral"><img src="images/redesocial1.png" title="facebook"></figure>
-                        <figure class="imglateral1"><img src="images/redesocial2.png" title="instagram"></figure>
-                        <figue class="imglateral2"><img src="images/redesocial3.png" title="whatsApp"></figue>     
+                        <figure class="imglateral"><img src="./images/redesocial1.png" title="facebook"></figure>
+                        <figure class="imglateral1"><img src="./images/redesocial2.png" title="instagram"></figure>
+                        <figue class="imglateral2"><img src="./images/redesocial3.png" title="whatsApp"></figue>     
                 </div>
             </div> 
         
