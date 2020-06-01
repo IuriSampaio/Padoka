@@ -181,12 +181,14 @@ body::-webkit-scrollbar-thumb{
 }
 td{
     max-width:100%;
-    background-color: antiquewhite;
+     background-color: rgba(198, 54, 218, 0.884); 
     box-shadow: 1px 1px 2px rgba(162, 0, 255, 0.842);
     min-width: auto;
     font-size: 25px;
+    padding: 10px;
     max-height: 800px;
     min-height: auto;
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -239,60 +241,27 @@ td{
     margin-left: auto;
     margin-right: auto;
 }
-    /* slider */
-    img{
-        max-width: 100%;
-        vertical-align: middle;
-        /* background-attachment: fixed; */
-        background-size: contain;
-    }
-    .slide{
-        float: left;
-        width: 100%;
-        margin-top: 5vh;
-        position: relative;
-        z-index: 988;
-    }
-    .slide_nav{
-        position: absolute;
-        left: 0;
-        top:50%;
-        margin-top: -50px;
-        width: 100%;
-    }
-    .slide_nav_item{
-        position: absolute;
-        padding: 15px 20px;
-        background: var(--bg-principal);
-        color: var(--detalhes);
-        z-index: 99;
-        border-radius: 50%;
-        font-weight: bold;
-        font-size: 30px;
-        font-family: monospace;
-    }
-    .slide_item{
-        display: none;
-    }
-    .slide_nav_item:hover{
-        background-color: var(--detalhes) ;
-        color:var(--bg-principal);
-        cursor: pointer;
-        transform: rotate(360);
-        transition: 1000ms;
-    }
-    .slide_nav_item.g{
-        left: 10px;
-    }
-    .slide_nav_item.b{
-        right: 10px;
-    }
-    .slide_item.primeiro{
-        display: block;
-    }
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    /* background-attachment: fixed; */
+    background-size: contain;
+}
+ .slide_item{
+    display: none;
+}
+  
+.menuBottom{
+    width: 100%;
+    height:40px;
+   
+    background-color: aliceblue;
+    position: fixed;
+}
 
-
-
+.produtosBottom, .promocoesBottom, .produtoMesBottom{
+    float: left;
+}
 }
 @media screen and (min-device-width:780px){
 .logo{
@@ -302,7 +271,7 @@ td{
     float: left;
 }
 /* menu DESKTOP */
-.conteinerMenuMoba, #produtosMoba{
+.conteinerMenuMoba, #produtosMoba,.menuBottom{
     display: none;
 }
 .conteinerMenuDesk{
@@ -335,7 +304,11 @@ td{
     width: 150px;
     font-size: x-large;
 }
-
+.title{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+}
 /* login */
 .conteinerForm{
     width: 600px;

@@ -32,11 +32,9 @@
                             <div class="paginas">
                                 <form action="index.php" method="post">
                                    <input type="submit" class="prod pags" name="produtos" value="produtos" >
-                                </form>
-                                <form action="index.php" method="post">
+                                   
                                     <input type="submit" class="prod pags" name="prodMes" value="Produtos do Mês">
-                                </form>
-                                <form action="index.php" method="post">
+                               
                                     <input type="submit" class="prod pags" name="promocoes" value="Promoções">
                                 </form>
                             </div>
@@ -91,5 +89,6 @@
     </script>
     
 <?php
+        require_once('./menu2Moba.php');
         require_once('../footer.php');
 ?>

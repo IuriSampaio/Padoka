@@ -37,11 +37,16 @@
             </nav>
                 <!-- login -->
             <div class="conteinerForm">
-                <form action="index.html" method="post" class="form">
-                <div class="usuario"> Usuario:<br> <input type="text" name="usuario" class="inputs"></div>
+                <form action="index.php" method="post" class="form">
+                    <div class="usuario"> Usuario:<br> <input type="text" name="usuario" class="inputs"></div>
                     <div class="senha">Senha:<br> <input type="password" name="senha" class="inputs"></div>
-                    <div class="btnok"><input type="submit" value="Ok" class="btnOk"></div>
+                    <div class="btnok"><input type="submit" value="Ok" name="cms" class="btnOk"></div>
                 </form>
+                <?php
+                    if(isset($_POST['cms'])){
+                        require_once('./cms.php');
+                    }
+                ?>
             </div>
             </div>  
         </header>
