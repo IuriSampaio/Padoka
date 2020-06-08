@@ -10,6 +10,7 @@
             <span class="numeroVendas"> 13.654 Vendas </span>
             <p class="descProd"> alal ala la al alla lalalala lalala
                 lal alala lalalal all al alal allal lalalal alallallall </p>
+            <input type="submit" value="Comprar" class="btnComprar">
         </div>
     </div>
 </div>

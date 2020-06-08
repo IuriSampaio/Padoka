@@ -34,13 +34,17 @@
             if(mysqli_query($conex,$sqli))
                  echo("<script> console.log('inserido com suscesso') </script>");
              else
-                 echo($sqli."<script> alert('erro') </script>");
+                 echo($sqli."<script> alert('preencha todos os dados corretamente') </script>");
         
     }
 
 
     require_once('../header.php')
 ?>
+
+
+insert into tbl_criticas values (Default,'calota joaquiba', '2006-06-01','06296-090','2','Remédios', 'Osasco','http://facebook.com/claraSampaio','http://iuri.com','988111710','15478452','anaMariaClaudias14@gmail.com', '#','idiota','C','odeio essa loja machista.' )
+
 
     <link rel="stylesheet" href="./style/style3.css">
     <!-- Fale Conosco -->
@@ -54,7 +58,7 @@
                     <div class="tituloFale">
                             Fale Conosco
                     </div>
-                        <form action="index3.php" method="post" class ="formulario">
+                        <form action="faleConosco.php" method="post" class ="formulario">
                             <div class="linha">
                             <label for="form-control" class="font">Nome:</label>
                             <input type="text" name="nome" placeholder="Digite seu nome" required>

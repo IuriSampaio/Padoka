@@ -37,7 +37,7 @@
             </nav>
                 <!-- login -->
             <div class="conteinerForm">
-                <form action="index.php" method="post" class="form">
+                <form action="../cms.php" method="post" class="form">
                     <div class="usuario"> Usuario:<br> <input type="text" name="usuario" class="inputs"></div>
                     <div class="senha">Senha:<br> <input type="password" name="senha" class="inputs"></div>
                     <div class="btnok"><input type="submit" value="Ok" name="cms" class="btnOk"></div>

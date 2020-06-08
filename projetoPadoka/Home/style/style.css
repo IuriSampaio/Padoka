@@ -61,7 +61,7 @@ body::-webkit-scrollbar-thumb{
 
 @media screen and (max-device-width:780px){
 /* menu MOBILE */
-#produtosDesk, .paginas, .conteinerMenuDesk,
+#produtosDesk, .conteinerMenuDesk,
 .form, .btnOk, .inputs,.slide{
     display: none;
 }
@@ -73,6 +73,12 @@ body::-webkit-scrollbar-thumb{
     background-position: center;
     background-image: url(../images/03.jpg);
     border-radius: 20px;
+}
+.paginas{
+    width: 30%;
+    height: 100%;
+    margin-top:100px;
+    background-color:yellow ;
 }
 .conteinerMenuMoba{
     width: 100%;
@@ -148,18 +154,10 @@ body::-webkit-scrollbar-thumb{
     margin-top: 4%;
 }
 
-.imglateral, .imglateral1, .imglateral2{
-    width: 100px;
-    height: 100px;
-    position: fixed;
-    display: none;
-    margin-top: 10px;
-    margin-left: 20px;
-}
 
 /* produtos */
 .produtosGG{
-    width: 100%;
+    width: 70%;
     height: auto;
     /* position: fixed; */
 }
@@ -249,14 +247,6 @@ img{
 }
  .slide_item{
     display: none;
-}
-  
-.menuBottom{
-    width: 100%;
-    height:40px;
-   
-    background-color: aliceblue;
-    position: fixed;
 }
 
 .produtosBottom, .promocoesBottom, .produtoMesBottom{
@@ -580,6 +570,12 @@ td{
 }
 .numeroVendas{
     font-size: xx-large;
+}
+.btnComprar{
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 .tituloProduro{
     width: 100%;
