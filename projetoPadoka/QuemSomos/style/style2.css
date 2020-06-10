@@ -33,6 +33,12 @@ body::-webkit-scrollbar-thumb{
     position: fixed;
 }
 @media screen and (max-device-width:780px){
+    iframe{
+        width: 80%;
+        height: 80%;
+        margin:2%;
+        border-radius:50%;
+    }  
  /* menu MOBILE */
  #produtosDesk, .paginas, .conteinerMenuDesk,
  .form, .btnOk, .inputs, .usuario,.senha{
