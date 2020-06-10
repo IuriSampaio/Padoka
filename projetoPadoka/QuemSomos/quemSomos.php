@@ -48,8 +48,17 @@
                         <!-- <img src="./images/fundo2.jpg" alt="propaganda" srcset="propaganda"> -->
                     </figure>
                     <section class="conheca">
-                        <div class="titulo"><h1>Obrigado pela visita</h1></div>
-                        <div class="redondinha">
+                        <div class="titulo"><h1>Visite nossas lojas</h1></div>
+                        <div class="local1 lc">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3658.254064564883!2d-46.75881046019815!3d-23.523362808618497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1591824126105!5m2!1spt-BR!2sbr" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        <div class="local2 lc">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d228.68739625490403!2d-46.84877215822167!3d-23.496569282409858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1591824325493!5m2!1spt-BR!2sbr" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        <div class="local3 lc">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3657.386970691176!2d-46.92791225042938!3d-23.55454147611792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1591824439456!5m2!1spt-BR!2sbr" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                       <!--  <div class="redondinha">
                             <h2><a href="../pagina3/index3.php"> venha trabalhar conosco</a></h2> 
                         </div>
                         <div class="final">
@@ -62,7 +71,7 @@
                                 <div class="texto2">
                                     <p>aefuuiccu ebwuibiu bciuewb uidbewqu cuewibxb cbnueinw uiewb cuewib eui e</p>
                                 </div>
-                            </div>
+                            </div> -->
                     </section>
                 </div>    
             </div>

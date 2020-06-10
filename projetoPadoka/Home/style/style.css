@@ -75,11 +75,27 @@ body::-webkit-scrollbar-thumb{
     border-radius: 20px;
 }
 .paginas{
-    width: 30%;
-    height: 100%;
-    margin-top:100px;
-    background-color:yellow ;
+    float: right;
+    width:20% ;
+    margin-top: 105px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--bg-segundario);
+    color: var(--txt-principal);
+    height: auto;
+    min-height: inherit;
 }
+.pags{
+    width: 100%;
+    height: auto;
+    min-height: 30px;
+    margin-bottom: 5px;
+    padding: 1%;
+    color: aliceblue;
+    background-color: var(--bg-segundario);
+    text-align: center;
+    display: block;
+}   
 .conteinerMenuMoba{
     width: 100%;
     height: inherit;
@@ -157,7 +173,7 @@ body::-webkit-scrollbar-thumb{
 
 /* produtos */
 .produtosGG{
-    width: 70%;
+    width: 100%;
     height: auto;
     /* position: fixed; */
 }
@@ -175,6 +191,7 @@ body::-webkit-scrollbar-thumb{
 #produtosMoba{
     margin-top: 100px;
     margin-left: auto;
+    float: left;
     margin-right: auto;
 }
 td{

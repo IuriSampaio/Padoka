@@ -89,6 +89,5 @@
     </script>
     
 <?php
-        require_once('./menu2Moba.php');
         require_once('../footer.php');
 ?>
