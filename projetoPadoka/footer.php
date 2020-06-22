@@ -1,6 +1,6 @@
 
 <footer class="rodape">
-                <form action="../cms.php" method="post">
+                <form action="../cms/cms.php" method="post">
                 <input type="submit" value="Sistema Interno" class="sistema">
                 </form>
                 <span class="endereco">

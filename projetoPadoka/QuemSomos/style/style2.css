@@ -34,11 +34,11 @@ body::-webkit-scrollbar-thumb{
 }
 @media screen and (max-device-width:780px){
     iframe{
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 400px;
         margin:2%;
-        border-radius:50%;
-    }  
+        margin-left: 20px;
+   }  
  /* menu MOBILE */
  #produtosDesk, .paginas, .conteinerMenuDesk,
  .form, .btnOk, .inputs, .usuario,.senha{
@@ -202,7 +202,7 @@ p{
      margin-left: auto;
      margin-right: auto;
  }
- 
+
  
 }
 
@@ -212,7 +212,7 @@ p{
 iframe{
     width: 400px;
     height: 400px;
-    margin:50px;
+    margin:40px;
     border-radius:50%;
     float:left;
 }    
@@ -465,6 +465,7 @@ iframe{
             display: grid;
         }
         .conheca{
+            margin-top: 30px;
             float: left;
             width: inherit;
             height: 500px;

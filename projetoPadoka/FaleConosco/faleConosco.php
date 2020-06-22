@@ -34,7 +34,7 @@
             if(mysqli_query($conex,$sqli))
                  echo("<script> console.log('inserido com suscesso') </script>");
              else
-                 echo($sqli."<script> alert('preencha todos os dados corretamente') </script>");
+                 echo("<script> alert('preencha todos os dados corretamente') </script>");
         
     }
 
@@ -42,8 +42,6 @@
     require_once('../header.php')
 ?>
 
-
-insert into tbl_criticas values (Default,'calota joaquiba', '2006-06-01','06296-090','2','Remédios', 'Osasco','http://facebook.com/claraSampaio','http://iuri.com','988111710','15478452','anaMariaClaudias14@gmail.com', '#','idiota','C','odeio essa loja machista.' )
 
 
     <link rel="stylesheet" href="./style/style3.css">
@@ -67,13 +65,13 @@ insert into tbl_criticas values (Default,'calota joaquiba', '2006-06-01','06296-
                                 <div class="coluna-2">
                                     <div>
                                         <label for="form-control" class="font">Data de Nascimento:</label>
-                                        <input type="text" name="dataNasc" placeholder="ex: 31/01/2000" class="dt" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )">
+                                        <input type="text" name="dataNasc" placeholder="ex: 31/01/2000" class="dt" id="outra_data" maxlength="10" onkeypress="mascaraData( this, event )" required>
                                     </div> 
                                 </div>
                                 <div class="coluna-2">
                                     <div>
                                         <label for="form-control" class="font">CEP:</label>
-                                        <input type="text" name = "cep" placeholder="Digite seu CEP" class="dt" id ='cep'>
+                                        <input required type="text" name = "cep" placeholder="Digite seu CEP" class="dt" id ='cep'>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +79,7 @@ insert into tbl_criticas values (Default,'calota joaquiba', '2006-06-01','06296-
                             <div class="linha">
                                 <div class="coluna-3">
                                     <label for="" class="font">Estado:</label>
-                                    <select name="estados" id="estados" id="estado">
+                                    <select name="estados"  id="estados" id="estado">
                                         <option value="" selected >Selecione um estado</option>
                                         <?php
                                         $sql = "select * from estados orderbyname" ;
@@ -93,32 +91,32 @@ insert into tbl_criticas values (Default,'calota joaquiba', '2006-06-01','06296-
                                 </div>
                                 <div class="coluna-3">
                                     <label for=""class="font">Bairro:</label>
-                                    <input type="text" name= "bairro" placeholder="Digite seu bairro" id ="bairro">
+                                    <input type="text" required name= "bairro" placeholder="Digite seu bairro" id ="bairro">
                                 </div>
                                 <div class="coluna-3">
                                     <label for="" class="font">Cidade:</label>
-                                    <input type="text" name= "cidade" placeholder="digite sua cidade"id ="cidade">
+                                    <input type="text" name= "cidade" required placeholder="digite sua cidade"id ="cidade">
                                 </div>
                             </div>
                             <div class="linha">
                                 <label for="url" class="font">Digite o link do facebook:</label>
-                                <input type="url" name="face"placeholder="http://....">
+                                <input type="url" name="face"placeholder="http://...." required>
                             </div>
                             <div class="linha">
                                 <label for="url" class="font">Homepage:</label>
-                                <input type="url" name="url"placeholder="http://....">
+                                <input type="url" name="url"placeholder="http://...." required>
                             </div>
                             <div class="linha">
                                 <div class="coluna-2">
                                     <div>
                                         <label for="form-control" class="font">Telefone:</label>
-                                        <input type="text" name="tel" placeholder="5555-5555" class="dt" id="outra_data" maxlength="13">
+                                        <input type="text" name="tel" placeholder="5555-5555" required class="dt" id="outra_data" maxlength="13">
                                     </div> 
                                 </div>
                                 <div class="coluna-2">
                                     <div>
                                         <label for="form-control" class="font">Celular:</label>
-                                        <input type="text"name="cel" placeholder="95555-5555" class="dt" maxlength="14" >
+                                        <input type="text"name="cel" required placeholder="95555-5555" class="dt" maxlength="14" >
                                     </div>
                                 </div>
                             </div>
@@ -143,7 +141,7 @@ insert into tbl_criticas values (Default,'calota joaquiba', '2006-06-01','06296-
                                 </div>
                                 <div class="coluna-2">
                                     <label for="profisao">Profisão</label>
-                                    <input type="text" name="profisao" placeholder="digite sua profisão" id="profisão">
+                                    <input type="text" name="profisao" required placeholder="digite sua profisão" id="profisão">
                                 </div>
                                 
                             </div>

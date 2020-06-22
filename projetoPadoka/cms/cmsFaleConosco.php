@@ -1,14 +1,45 @@
-<?=require_once('./cmsHeader.php')?>
+
 <main>
+    <div id="conteinerModal" >
+        <div id="modal"></div>
+    </div>
+    <?=require_once('./cmsHeader.php')?>
+     <script src="jQuery.js"></script>
+        <script type="text/javascript">
+              $(document).ready(function(){
+                    $('.pesquisar').click(function(){
+                        $('#conteinerModal').fadeIn(1000);
+                    });
+                });
+
+                 
+                      function vizualizarctt(idCtt){ 
+                           $.ajax({
+                                // chamada via post
+                                type:"POST",
+                                // para está pagina
+                                url: "cmsDetalhes.php",
+                                // modo vizualizar e id passado pelo argumento da função
+                                data:{modo:'vizualizar',id:idCtt},
+                                success:function(dados){
+                                     $('#modal').html(dados);
+                                }
+                           });
+                      }
+       
+                   
+
+        </script>
+
     <form action="cmsFaleConosco.php" method="post">
-    <select name="filtroCommment" id="filtrar">
-        <option value="#">  Filtrar por tipo de comentario  </option>
-        <option value="S">Sugestões</option>
-        <option value="C">Criticas</option>
-        <option value="T">Pedido de emprego</option>
-    </select>
-    <button type="submit" name="filtrar" id="btnFiltrar"> Filtrar pelo Desejado </button>
-    <button type="submit" name="mostrar" id="btnTodos"> Mostrar Todos </button>    
+        <select name="filtroCommment" id="filtrar">
+            <option value="#">  Filtrar por tipo de comentario  </option>
+            <option value="S">Sugestões</option>
+            <option value="C">Criticas</option>
+            <option value="T">Pedido de emprego</option>
+        </select>
+        <button type="submit" name="filtrar" id="btnFiltrar"> Filtrar pelo Desejado </button>
+        <button type="submit" name="mostrar" id="btnTodos"> Mostrar Todos os usuarios cadastrados </button>    
     </form>
     
     <div class="consulta">
@@ -95,7 +126,7 @@
                     <div class="options">
                             <a class="fas fa-user-times" onclick="return confirm('Deseja realmente excluir o registro?');"
                              href="./delete.php?modo=excluir&id=<?=$rsContatos['idCritica']?>"></a>
-                            <a class="fas fa-search-plus"></a>
+                            <a class="pesquisar fas fa-search-plus" onclick="vizualizarctt(<?=$rsContatos['idCritica']?>);"></a>
                         </div>
                     </td>
                 </tr>

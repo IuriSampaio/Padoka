@@ -37,14 +37,14 @@
             </nav>
                 <!-- login -->
             <div class="conteinerForm">
-                <form action="../cms.php" method="post" class="form">
+                <form action="../cms/cms.php" method="post" class="form">
                     <div class="usuario"> Usuario:<br> <input type="text" name="usuario" class="inputs"></div>
                     <div class="senha">Senha:<br> <input type="password" name="senha" class="inputs"></div>
                     <div class="btnok"><input type="submit" value="Ok" name="cms" class="btnOk"></div>
                 </form>
                 <?php
                     if(isset($_POST['cms'])){
-                        require_once('./cms.php');
+                        require_once('../cms/cms.php');
                     }
                 ?>
             </div>

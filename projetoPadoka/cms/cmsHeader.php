@@ -1,5 +1,5 @@
 <?php
-    require_once('./FaleConosco/BD/banco.php');
+    require_once('../FaleConosco/BD/banco.php');
     $conex = conexaoMysql('padoka');
 
 ?>
@@ -19,13 +19,13 @@
     </header>
     <ul>
     <form action="cms.php" method="post">
-        <li> <a href="./Home/index.php"> Voltar pra Home</a></li>
+        <li> <a href="../Home/index.php"> Voltar pra Home</a></li>
         <li> <a href="./cms.php">Produtos</a> </li>
         <li> <a href="./cms.php"> Produto do mês</a> </li>
         <li> <a href="./cms.php"> Promoções </a> </li>
-        <li> <a href="./cms.php"> Curiosidades </a> </li>
+        <li> <a href="./cmsCuriosidades.php"> Curiosidades </a> </li>
         <li> <a href="./cmsFaleConosco.php"> Fale Conosco </a> </li>
-        <li> <a href="./cms.php"> Quem Somos </a> </li>
-        <li> <a href="./cms.php"> Nossas Lojas </a> </li>
+        <li> <a href="./cmsQuemSomos.php"> Quem Somos </a> </li>
+        <li> <a href="./cmsNossasLojas.php"> Nossas Lojas </a> </li>
     </form>
     </ul>

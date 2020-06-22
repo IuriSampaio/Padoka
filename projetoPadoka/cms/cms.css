@@ -1,0 +1,380 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    background-color: darkgray;
+    padding: 20PX;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    height: 100px;
+}
+h1, h3{
+    float: left;
+    font-size: 80px;
+    width: auto;
+    height: auto;
+}
+div>#imgCms{
+    width: 100px;
+    height: 100px;
+    background-image: url(../imgs/cms.png);
+    float: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul{
+    width: 100%;
+    height: 150px;
+    list-style: none;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+li{
+    width:220px;
+    padding-bottom: 10px;
+    float: left;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    border:solid 2px orangered;
+    padding-top: 1%;
+    margin-bottom: 0px;
+    margin-left: 28px;
+    margin-top: 10px;
+}
+li:hover{
+
+    border:solid 2px white;
+    background-color: orangered;
+    color:black ;
+    cursor: pointer;
+    transition: 1s;
+}
+table{
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+}
+
+td{
+    border: 1px solid orangered;
+    width: 20px;
+    height: 40px;
+    text-align: center;
+}
+a{
+    color: orangered;
+    padding: 10px;
+}
+a:hover{
+    color: chartreuse;
+    cursor: pointer;
+}
+tr:hover{
+    background-color: black;
+    color: white;
+}
+.titulo{
+    font-weight: bolder;
+    font-size: 30px;
+}
+.titulo:hover{
+    background-color: white;
+    color: orangered;
+}
+.titulos:hover{
+    background-color: white;
+    color: orangered;
+}
+
+#filtrar, #slcNivel{
+    width: 40%;
+    height: 50px;
+    color: orangered;
+    font-size: 20px;
+    margin-left: 5%;
+     border: 2px solid orangered;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#slcNivel{
+    margin: 2%;
+    width: 50%;
+}
+
+.desc{
+    margin-bottom: 400px;
+}
+#btnTodos , .btnNivel{
+    width: 500px;
+    height: 50px;
+    border: 2px solid orangered;
+    color: orangered;
+    font-size: large;
+    margin-left: 5%;
+    float: center;
+    background-color: white;
+    margin-top: 20px;
+}
+.btnNivel{
+    width: 150px;
+
+}
+#btnFiltrar{
+    width: 300px;
+    margin-left: 5%;
+    height: 50px;
+    border: 2px solid orangered;
+    color: orangered;
+    font-size: large;
+    float: center;
+    background-color: white;
+    margin-top: 20px;
+}
+#btnFiltrar:hover, #btnTodos:hover, .btnNivel:hover{
+    color: white;
+    cursor: pointer;
+    transform: translate3d(50,50);
+    transition: 1s;
+    border: 2px solid white;
+    background-color: orangered;
+}
+.ti{
+    padding: 30px;
+}
+.desc{
+    margin-bottom: 70px;
+    float: right;
+    margin-top: 20px;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    margin-top: 200px;
+    background-color: darkgray;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius:30px ;
+    text-align: center;
+    font-size: smaller;
+}
+.conteinerGG{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .tt1{
+        margin: 50px;
+    }
+    .imgsSlide{
+        width: 100%;
+        float: left;
+        height: auto;
+    }
+    
+    #conteinerImgMoba{
+        width: 100%;
+        float: left;
+    }
+    .conteudos{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        float: left;
+    }
+    #txtArea{
+        float: left;
+        margin: 30px;
+        width: 90%;
+        margin-left: auto;
+        align-self: center;
+        margin-right: auto;
+        border-radius: 20px;
+        height: 100px;
+        font-size: 19px;
+    }
+    .inpSlide{
+        margin-bottom: 5px;
+        margin-top:5px; 
+        width: 40%;
+        float: right;
+    }
+    .inpsTxt{
+        margin-top: 50px;
+    }
+    .title{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .meio{
+        width: 40%;
+        float: right;
+    }
+    .inptitle, .inpMoba, .inpSlide{
+        float: left;
+        width: 80%;
+        margin:2%;
+        border-radius: 50px;
+        height: 40px;
+    }
+    .btnEnv{
+        width: 40%;
+        height: 50px;
+        margin-left: 30%;
+        color: gray;
+        border-radius: 20px;
+        border: solid gray 5px;
+        margin-right: auto;
+        align-self: center;
+        background-color: orangered;
+        text-align: center;
+    }
+    .btnEnv:hover{
+        color: orangered;
+        border: solid orangered 5px;
+        background-color: gray;
+        font-size: 30px;
+        transition: 1s;
+    }
+
+.tudo{ margin-left: 12%; }
+.tudo2{ margin-left: 17%; }
+.bottom{ margin-bottom: 100px; }
+#conteinerModal, #conteinerModal2,
+#conteinerModal3, #conteinerModal5{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 998;
+    position: fixed;
+    padding-top: 7vh;
+    box-sizing: border-box;
+
+    display: none;
+}
+#modal, #modal2, #modal3, #modal4, #modal5{
+    border: orangered 7px solid;
+    width: 60vw;
+    height: 80vh;
+    margin-left:auto;
+    border-radius: 20px;
+    margin-right:auto;
+    background-color: white;
+}
+#conteinerModal4{
+    width: 100%;
+     position: fixed;
+    padding-top: 7vh;
+    z-index: 999;
+    box-sizing: border-box;
+    height: 100%;
+    display: none;
+}
+#modal4{
+    width: 50vw;
+    height: auto;
+    margin-left: 5vw;
+    box-shadow: 2px 2px 50px black;
+}
+
+#fechar, #fechar2{
+    font-size: 90px;
+    font-family: monospace;
+    height: 50px;
+    float: right;
+}
+.coluna{
+    font-family: verdana;
+    font-size:30px;
+    height: 50px;
+    padding: 5px;
+}
+#titu, .titulofun{
+    height: 80px;
+    font-size: 40px;
+    background-color: orangered;
+    color: white;
+    text-align: center;
+}
+.maior{
+    height:120px
+}
+.titulofun{
+    font-size: 80px;
+}
+
+.check{
+    margin-top: 100px;
+    float: left;
+    margin-top: -20px;
+    width: 100%;
+}
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    margin:10px;
+    visibility: hidden;
+}
+
+label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 82px;
+    height: 37px;
+    background: grey;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+label::after{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + label {
+    background-color: orangered;
+}
+
+input:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+label:active:after {
+    width: 55px;
+}
+h4{
+    font-size: 40px;
+}
+.line{
+    margin: 10px;
+    padding: 20px;
+}
+.inpPerm{
+    width: 80%;
+    height: 60px;
+    margin-left: 9%;
+    background: orangered;
+    color: white;
+    font-size: 20px;
+    border-radius: 100px;
+    text-align: center;
+    box-shadow: 1px 2px 1px 2px rgba(200,100,200,0.3);
+}
