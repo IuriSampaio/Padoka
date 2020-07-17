@@ -1,5 +1,40 @@
 <?php
     require_once('../header.php');
+    require_once('../FaleConosco/BD/banco.php');
+    $conex = conexaoMysql('padoka'); 
+    $sql = "select * from tbl_curiosidade order by idcuriosidades desc";
+     
+    $comandoSelecionado = mysqli_query($conex,$sql);
+   
+    if ($rsCuriosidade = mysqli_fetch_assoc($comandoSelecionado)){
+        $img1 = $rsCuriosidade['imgLoja1'];
+        $img2 = $rsCuriosidade['imgLoja2'];
+        $img3 = $rsCuriosidade['imgLoja3'];
+        $txt1 = $rsCuriosidade['txtLoja1'];
+        $txt2 = $rsCuriosidade['txtLoja2'];
+        $txt3 = $rsCuriosidade['txtLoja3'];
+    }
+
+    $sqli="select * from tbl_nossasLojas order by idLojas desc";
+
+    $comando = mysqli_query($conex,$sqli);
+
+    if($rsNossasLojas = mysqli_fetch_assoc($comando)){
+        $titulo1 = $rsNossasLojas['titulo1'];
+        $titulo2 = $rsNossasLojas['titulo2'];
+        $titulo3 = $rsNossasLojas['titulo3'];
+        
+        $txtL1 = $rsNossasLojas['txtLoja1'];
+        $txtL2 = $rsNossasLojas['txtLoja2'];
+        $txtL3 = $rsNossasLojas['txtLoja3'];
+        
+        $imgL1 = $rsNossasLojas['imgLoja1'];
+        $imgL2 = $rsNossasLojas['imgLoja2'];
+        $imgL3 = $rsNossasLojas['imgLoja3'];
+
+
+    }
+
 ?>
 <link rel="stylesheet" href="./style/style.css">
 <div class="conteinerGG">
@@ -9,23 +44,28 @@
         </div>
         <div class="linha">
             <div class="coluna-3">
-                <div class="img"><figure class="pao"></figure></div>
+                <div class="img"><figure class="pao">
+                    <img src="../cms/filesCuriosidades/<?=$img1?>" alt="paozinho">
+                </figure></div>
                 <div class="texto">
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
+                    <?=$txt1?>
+                </div>
+            </div>
+            <div class="coluna-3">
+                <div class="img"><figure class="paozao">
+                    <img src="../cms/filesCuriosidades/<?=$img2?>" alt="paozinho">
+                </figure></div>
+                <div class="texto">
+                <?=$txt2?>
 
                 </div>
             </div>
             <div class="coluna-3">
-                <div class="img"><figure class="paozao"></figure></div>
+                <div class="img"><figure class="paozino">
+                    <img src="../cms/filesCuriosidades/<?=$img3?>" alt="paozinho">
+                </figure></div>
                 <div class="texto">
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-
-                </div>
-            </div>
-            <div class="coluna-3">
-                <div class="img"><figure class="paozino"></figure></div>
-                <div class="texto">
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
+                <?=$txt3?>
 
                 </div>
             </div>
@@ -44,41 +84,34 @@
         <div class="loja">
             <div class="imagemLoja">
                 <figure class="loja1">
-
+                     <img src="../cms/filesNossasLojas/<?=$imgL1?>" alt="<?=$titulo1?>">
                 </figure>
             </div>
-            <h2 class="nomeLoja"> Padoka do Capão - Cede </h2>
+            <h2 class="nomeLoja"> <?=$titulo1?> </h2>
             <div class="descrisaoLoja">
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
+                <?=$txtL1?>
             </div>
         </div>
         <div class="loja">
-            <h2 class="nomeLoja2"> Padoka De OZ </h2>
+            <h2 class="nomeLoja2"> <?=$titulo2?> </h2>
             <div class="descrisaoLoja2">
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
+                <?=$txtL2?>
             </div>
             <div class="imagemLoja">
-                <figure class="loja2"> </figure>
+                <figure class="loja2">
+                    <img src="../cms/filesNossasLojas/<?=$imgL2?>" alt="<?=$titulo2?>">
+                 </figure>
             </div>
         </div>
         <div class="loja">
             <div class="imagemLoja">
                 <figure class="loja3">
-
+                    <img src="../cms/filesNossasLojas/<?=$imgL3?>" alt="<?=$titulo3?>">
                 </figure>
             </div>
-            <h2 class="nomeLoja"> Padoka Hill Valey </h2>
+            <h2 class="nomeLoja"> <?=$titulo3?> </h2>
             <div class="descrisaoLoja">
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
-                也我自死者又人中绝藏定李司我，也派婵中吴韩密中我同关天如非，五切着能是害性杀不日，场感位间，君小家姑为自国到的位人刑方不，苦商疾你虑官虽中瞠词可决是而诗使当，司的人快为风人故谓木未后活书后本郭到，劫了龄游总起中负活，帝国见人里否褒好人的秦读事智未陀登太么，极其燕文耳不玉气惜哉血十，力反兴是战因也恩吴活生秦未能，韦天土洪躲有你承于纯之一解法用，极们谭她帝哥王对诗和你大，玉老是败怒德衣订，勇釜艳的甲。
+                <?=$txtL3?>
             </div>
         </div>
     </div>

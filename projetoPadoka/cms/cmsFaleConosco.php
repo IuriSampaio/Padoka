@@ -89,7 +89,7 @@
                     <div class="options">
                             <a class="fas fa-user-times" onclick="return confirm('Deseja realmente excluir o registro?');"
                              href="./delete.php?modo=excluir&id=<?=$rsContatos['idCritica']?>"></a>
-                            <a class="fas fa-search-plus"></a>
+                            <a class="pesquisar fas fa-search-plus"  onclick="vizualizarctt(<?=$rsContatos['idCritica']?>);"> </a>
                         </div>
                     </td>
                 </tr>

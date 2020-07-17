@@ -242,13 +242,12 @@ body::-webkit-scrollbar-thumb{
          border: 1px solid rgba(100, 0, 200, 0.6);
  
      }
-     .imagemLoja>.loja1, .imagemLoja>.loja3,  .imagemLoja>.loja2{
+     .imagemLoja>.loja1>img, .imagemLoja>.loja3>img,  .imagemLoja>.loja2>img{
          width: 550px;
          margin-left: auto;
-         margin-top: 1%;
+         margin-left: 15% ;
          margin-right: auto;
          height: 350px;
-         background-image: url('../imgs/cede.jpg');
          background-repeat: no-repeat;
          background-size: cover;
      }   
@@ -264,12 +263,7 @@ body::-webkit-scrollbar-thumb{
          text-align: center;
          font-weight: bolder;
      }
-     .imagemLoja>.loja2{
-         background-image: url('../imgs/faixada2.jpg');
-     }
-     .imagemLoja>.loja3{
-         background-image: url('../imgs/faixada.jpg');
-     }
+
 }
  
 
@@ -392,26 +386,23 @@ body::-webkit-scrollbar-thumb{
        margin-right: auto;
        margin-top: 20px;
    }
-   .img>.pao{
+   .img>.pao>img{
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
         background-size: cover;
-        background-image: url('../imgs/paozinho.jpg');
    }
-   .img>.paozao{
+   .img>.paozao>img{
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
         background-size: cover;
-        background-image: url('../imgs/paoforma.jpg');
    }
-   .img>.paozino{
+   .img>.paozino>img{
         background-repeat: no-repeat;
         width: 100%;
         height: 100%;
         background-size: cover;
-        background-image: url('../imgs/paolado.jpg');
    }
    /* rodapé */
    .rodape{
@@ -473,14 +464,13 @@ body::-webkit-scrollbar-thumb{
         border: 1px solid rgba(100, 0, 200, 0.6);
 
     }
-    .imagemLoja>.loja1, .imagemLoja>.loja3{
+    .imagemLoja>.loja1>img, .imagemLoja>.loja3>img{
         width: 550px;
         margin-left: 1%;
         margin-top: 1%;
         float: left;
         margin-right: 2%;
         height: 350px;
-        background-image: url('../imgs/cede.jpg');
         background-repeat: no-repeat;
         background-size: cover;
     }   
@@ -499,19 +489,15 @@ body::-webkit-scrollbar-thumb{
     .nomeLoja2{
         max-width: 60%;
     }
-    .imagemLoja>.loja2{
+    .imagemLoja>.loja2>img{
         width: 450px;
         margin-left: 1%;
         margin-bottom: 1%;
         float: right;
         margin-right: 2%;
         height: 350px;
-        background-image: url('../imgs/faixada2.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-    }
-    .imagemLoja>.loja3{
-        background-image: url('../imgs/faixada.jpg');
     }
     .loja>.descrisaoLoja2{
         float: left;

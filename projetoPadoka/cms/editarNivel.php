@@ -6,32 +6,30 @@ if(isset($_POST['modo']) && $_POST['modo'] == 'editarNivel' && isset($_POST['id'
         $id = $_POST['id'];
        
    	if (isset($_POST['btnEnvNivel']) ){
-   		echo"<script>alert('fmovmsvms')</script>";
-		$nomePermicao = $_POST['nomePermicao'];
-		
-		$admUsuarios = $_POST['admUsuarios']==checked  ? 1 : 0;
-		$admConteudo = $_POST['admConteudo']==checked ? 1 : 0;
-		$admFaleConosco = $_POST['admFaleComNois']==checked ? 1 : 0;
-		$admProdutos = $_POST['admProdutos']==checked ? 1 : 0;
+		$nomePermicao = $_POST['newName'];
+		$admUsuarios = $_POST['admUsuarios']=='checked'  ? 1 : 0;
+		$admConteudo = $_POST['admConteudo']=='checked' ? 1 : 0;
+		$admFaleConosco = $_POST['admFaleComNois']=='checked' ? 1 : 0;
+		$admProdutos = $_POST['admProdutos']=='checked' ? 1 : 0;
 
 		 $sqli = "update tbl_permicao set
                     nomePermicao ='".$nomePermicao."',
-                    adm_funcionario=".$admUsuarios.",
-                    adm_conteudo=".$admConteudo.",
-                    adm_faleConosco= ".$admFaleConosco.",
-                    adm_produtos=".$admProdutos."
+                    adm_funcionario='".$admUsuarios."',
+                    adm_conteudo='".$admConteudo."',
+                    adm_faleConosco= '".$admFaleConosco."',
+                    adm_produtos='".$admProdutos."'
                     where idPermicao = ".$id;
 
-
-        echo"<script>alert(".$sqli.")</script>";
-		if(mysqli_query($conex,$sqli)){
+        echo($sqli);
+       
+		 if(mysqli_query($conex,$sqli)){
                         echo("
-                        <script> 
-                        console.log('inserido com suscesso');
-                        location.href = 'cmsAdmFuncionario.php'
-                        </script>
-                        ");
-        }else{
+                         <script> 
+                         alert('inserido com suscesso'".$sqli.");
+                         location.href = 'cmsAdmFuncionario.php'
+                         </script>
+                         ");
+         }else{
                         echo("
                         <script> 
                         alert('erro') 
@@ -39,7 +37,7 @@ if(isset($_POST['modo']) && $_POST['modo'] == 'editarNivel' && isset($_POST['id'
                         location.href = 'cmsAdmFuncionario.php'
                         </script>
                         ");
-        }	
+         }	
 }
 ?>
 <!DOCTYPE html>
@@ -54,14 +52,14 @@ if(isset($_POST['modo']) && $_POST['modo'] == 'editarNivel' && isset($_POST['id'
     <script type="text/javascript">
     	//fechando modal com jim carey
  			$(document).ready(function(){
-               	$('#fechar4').click(function(){
+               	$('#fechar').click(function(){
                		$('#conteinerModal4').fadeOut(1000);
+
                	});
            	});
-
     </script>
 
-	<a id="fechar4">X</a>
+	<a id="fechar">x</a>
 
 	<?php
 			$sql = "select * from tbl_permicao where idPermicao = ".$id;
@@ -76,7 +74,10 @@ if(isset($_POST['modo']) && $_POST['modo'] == 'editarNivel' && isset($_POST['id'
 	?>
 	<h2 style="text-align: center;font-size: 70px;"><?= $rsPermicoes['nomePermicao']?></h2>
 
-	<form method="post" action="editarNivel.php">
+	<form method="post" action="cmsAdmFuncionario.php">
+			<div style="margin-bottom: 40px;"class="line">
+				<input type="text" name="newName" style="margin-left: 100px;text-align: center; font-size: 25px;" placeholder="novo nome para permição" class="inpSlide">
+			</div>
 			<div class="line">
 				<h4> ADM. Usuarios: </h4>
 					<input type="checkbox" class="marca" id="admUsuarios" name="admUsuarios" <?= $usu ?> value="U">
@@ -100,10 +101,11 @@ if(isset($_POST['modo']) && $_POST['modo'] == 'editarNivel' && isset($_POST['id'
 					<input type="checkbox" class="marca" id="admFaleComNois" name="admFaleComNois" <?= $fale  ?> value="F">
 					<label for="admFaleComNois"></label>
 			</div>
+			<input type="submit" name="btnEnvNivel" class="btnEnv" value="Cadastrar">
+	</form>
 
 <?php } }?>
 
-		<input type="submit" name="btnEnvNivel" class="btnEnv" value="Cadastrar">
-	</form>
+		
 </body>
 </html>

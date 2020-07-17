@@ -1,3 +1,45 @@
+<?php
+require_once('../FaleConosco/BD/banco.php');
+$conex = conexaoMysql('padoka'); 
+    
+$action = '';
+    if(isset($_POST['cms'])){
+        $nome = $_POST['usuario'];
+        $senha = $_POST['senha'];
+
+        $senhaComp = md5($senha);
+        echo($senhaComp);
+        $sql = "SELECT  tbl_user.* , tbl_permicao.* FROM tbl_user, tbl_permicao 
+        where nomeUsr = '".$nome."'AND senha = '".$senhaComp."' 
+        and tbl_permicao.idPermicao = tbl_user.idPermicao;"; 
+
+        $funcionarios = mysqli_query($conex,$sql);
+                        
+        if($rsFun = mysqli_fetch_assoc($funcionarios)){
+            if($rsFun != []){
+                if($_SESSION['atORdt'] == "desativado"){
+                    echo "<script>alert('O usuario ".$nome." não tem permição')</script>";
+                }else{
+                    $action = '../cms/cms.php';    
+                
+                    session_start();
+                    $_SESSION['nomeUsr'] = $rsFun['nomeUsr'];
+                    $_SESSION['nomePerm'] = $rsFun['nomePermicao'];
+
+                    $_SESSION['permAdmFun'] = $rsFun['adm_funcionario'];
+                    $_SESSION['permAdmCon'] = $rsFun['adm_conteudo'];
+                    $_SESSION['permAdmfale'] = $rsFun['adm_faleConosco'];
+                    $_SESSION['permAdmProd'] = $rsFun['adm_produtos'];
+
+                    echo "<script> location.href = '../cms/cms.php' </script>";           
+            
+                }
+            }
+        }
+        
+        
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -37,16 +79,12 @@
             </nav>
                 <!-- login -->
             <div class="conteinerForm">
-                <form action="../cms/cms.php" method="post" class="form">
+                <form action="<?=$action?>" method="post" class="form">
                     <div class="usuario"> Usuario:<br> <input type="text" name="usuario" class="inputs"></div>
                     <div class="senha">Senha:<br> <input type="password" name="senha" class="inputs"></div>
                     <div class="btnok"><input type="submit" value="Ok" name="cms" class="btnOk"></div>
                 </form>
-                <?php
-                    if(isset($_POST['cms'])){
-                        require_once('../cms/cms.php');
-                    }
-                ?>
+                
             </div>
             </div>  
         </header>

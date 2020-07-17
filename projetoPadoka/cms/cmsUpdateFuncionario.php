@@ -13,28 +13,28 @@ if (isset($_GET['modo']) && $_GET['modo'] == 'atualizar'){
             $senha = $_POST['senhaFuncinario'];
             $idPermicao = $_POST['slcNivel'];
                 
-        $sqli = "update tblContatos set
+        $sqli = "update tbl_user set
                     nomeUsr ='".$nome."',
                     telefone='".$telefone."',
-                    celular='".$celular."',
                     email='".$email."',
                     CPF ='".$cpf."',
                     senha = '".$senha."',
-                    where idPermicao = ".$id;
-                    //  echo($sqli);
+                    idPermicao = '".$idPermicao."'
+                    where idUsr = ".$id;
+               
                     if(mysqli_query($conex,$sqli))
                         echo("
                         <script> 
                         console.log('inserido com suscesso');
-                        location.href = '../cmsAdmFuncionario.php'
+                        location.href = './cmsAdmFuncionario.php'
                         </script>
                         ");
                     else
                         echo("
                         <script> 
-                        alert('erro') 
+                        alert('erro".$sqli."') 
                         window.history.back();
-                        location.href = '../cmsAdmFuncionario.php'
+                        location.href = './cmsAdmFuncionario.php'
                         </script>
                         ");
                 }

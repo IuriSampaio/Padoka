@@ -1,5 +1,5 @@
-# Projeto PHP
-## Entrega do Projeto de criação de um site para uma padaria.
+# Projeto PHP e MYSQL
+## Entrega do Projeto de criação de um site para uma padaria e desenvolvimento do seu cms(sistema de gerenciamento de conteúdo).
 
 ![Panificadora Alfa](./projetoPadoka/imgs/logo.png)
 
@@ -13,4 +13,6 @@
 - JQuerry para desenvolvimento de slider e menu mobile
 - JavaScript Vanilla para validação de formulario
 - Validação de HTML e CSS no W3C
+- Ajax e js Vanilla para criação de modais
+
 

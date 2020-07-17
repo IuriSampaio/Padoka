@@ -16,7 +16,7 @@
                 //se rodar o query anterior no banco, ele...
                 if(mysqli_query($conectado,$sql)){
                     //...redireciona para a pagina principal
-                    header('location:./cmsAdmFuncionario.php');
+                    header('location:cmsAdmFuncionario.php');
                 }
             }
         }

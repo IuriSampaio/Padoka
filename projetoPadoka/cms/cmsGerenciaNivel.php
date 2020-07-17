@@ -19,7 +19,7 @@
     <script type="text/javascript">
     	//fechando modal com jim carey
  			$(document).ready(function(){
-               	$('#fechar2').click(function(){
+               	$('#fechar').click(function(){
                		$('#conteinerModal3').fadeOut(1000);
                	});
                	$('.editarNivel').click(function(){
@@ -42,7 +42,7 @@
     <div id="conteinerModal4">
     	<div id="modal4"></div>
     </div>
-	<a id="fechar2">X</a>
+	<a id="fechar">x</a>
 	<table>
 		<tr >
 			<td  colspan="6" class="titulofun top">Niveis</td>

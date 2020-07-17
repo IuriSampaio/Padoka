@@ -2,7 +2,7 @@
 	require_once('../FaleConosco/BD/banco.php');
 	$conex = conexaoMysql('padoka'); 
 	
-
+	$idPermicao = 0;
 
      $action = 'insertFuncionario.php?modo=inserir';
      if (isset($_GET['modo']) && 
@@ -20,16 +20,16 @@
             $comandoSelecionaDado = mysqli_query($conex,$sql);
 
             if ($rsListContatos = mysqli_fetch_assoc($comandoSelecionaDado)){
-                $nome = $_POST['nomeFuncinario'];
-            	$email = $_POST['emailFuncinario'];
-            	$telefone = $_POST['telefoneFuncinario'];
-            	$cpf = $_POST['cpfFuncinario'];
-            	$senha = $_POST['senhaFuncinario'];
+                $nome = $rsListContatos['nomeUsr'];
+            	$email = $rsListContatos['email'];
+            	$telefone = $rsListContatos['telefone'];
+            	$cpf = $rsListContatos['CPF'];
+            	$senha = $rsListContatos['senha'];
 
-            	$idPermicao = $_POST['slcNivel'];
-            	$nomePermicao = $_POST['nomePermicao'];
+            	$idPermicao = $rsListContatos['idPermicao'];
+            	$nomePermicao = $rsListContatos['nomePermicao'];
 
-                $action = "cmsUpdateFuncionario.php?modo=atualizar&id=".$rsListContatos['idFuncionario'];
+                $action = "cmsUpdateFuncionario.php?modo=atualizar&id=".$rsListContatos['idUsr'];
             }
         }     
 	

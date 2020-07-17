@@ -1,7 +1,7 @@
 
 <footer class="rodape">
-                <form action="../cms/cms.php" method="post">
-                <input type="submit" value="Sistema Interno" class="sistema">
+                <form action="../modalLogin.php" method="post">
+                    <input type="submit"  name="btnInternoSys" value="Sistema Interno" class="sistema">
                 </form>
                 <span class="endereco">
                             endereço:xxxxxxx xxxxxxxxxxxxxx xxxxxxxxx  n°xxxx

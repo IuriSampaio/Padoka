@@ -1,20 +1,58 @@
+
 *{
     padding: 0px;
     margin: 0px;
 }
-
+body::-webkit-scrollbar{
+    width: 20px;
+}
+body::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    background: orangered;
+    border-radius: 40px;
+}
 header{
     background-color: darkgray;
     padding: 20PX;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    height: 100px;
+    height: 110px;
+}
+.linhadatable:hover{
+    height: 40px;
+    padding: 0px;
+    margin:0px;
+    font-size: 20px;
+    background-color: white;
+    color: black;
 }
 h1, h3{
     float: left;
     font-size: 80px;
     width: auto;
     height: auto;
+}
+.sauda{
+    width: 100%;
+    text-align: center;
+    margin-left: -10%;
+}
+button{
+    min-width: 200px;
+    width: auto;
+    padding: 20px;  
+    height: 60px;
+    background-color: orangered;
+    color: white;
+    font-size: 20px;
+    margin: 50px;
+    margin-left: 17%;
+    border:white;
+}
+button:hover{
+    cursor: pointer;
 }
 div>#imgCms{
     width: 100px;
@@ -26,24 +64,25 @@ div>#imgCms{
 }
 ul{
     width: 100%;
-    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    height: auto + calc(10px);
     list-style: none;
     color: white;
     background-color: black;
-    padding: 5px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 }
 li{
-    width:220px;
-    padding-bottom: 10px;
+    width:10%;
+    margin:1%; 
+    max-height: 50px;
+    padding: 1%; 
     float: left;
     text-align: center;
-    font-size: x-large;
+    font-size: large;
     font-weight: bolder;
     border:solid 2px orangered;
-    padding-top: 1%;
-    margin-bottom: 0px;
-    margin-left: 28px;
-    margin-top: 10px;
 }
 li:hover{
 
@@ -76,16 +115,13 @@ a:hover{
 tr:hover{
     background-color: black;
     color: white;
+    font-size: 25px;
 }
 .titulo{
     font-weight: bolder;
     font-size: 30px;
 }
-.titulo:hover{
-    background-color: white;
-    color: orangered;
-}
-.titulos:hover{
+.titulo:hover,.titulos:hover {
     background-color: white;
     color: orangered;
 }
@@ -145,6 +181,8 @@ tr:hover{
 }
 .ti{
     padding: 30px;
+    
+    float: left;
 }
 .desc{
     margin-bottom: 70px;
@@ -154,7 +192,7 @@ tr:hover{
 footer{
     width: 100%;
     height: 100px;
-    margin-top: 200px;
+    margin-top: 150px;
     background-color: darkgray;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius:30px ;
@@ -249,7 +287,7 @@ footer{
 .tudo2{ margin-left: 17%; }
 .bottom{ margin-bottom: 100px; }
 #conteinerModal, #conteinerModal2,
-#conteinerModal3, #conteinerModal5{
+#conteinerModal3, #conteinerModal5,#conteinerModal7, #conteinerModal9{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.8);
@@ -260,7 +298,21 @@ footer{
 
     display: none;
 }
-#modal, #modal2, #modal3, #modal4, #modal5{
+/*.coluna-3{
+    width: 20%;
+    float: left;
+}*/
+
+#conteucoCuriosidade{
+    margin-top: 340px;
+    margin-bottom: 400px;
+}
+ .linha{
+       width: 100%;
+       height: 500px;
+       box-sizing: border-box;
+   }
+#modal, #modal2, #modal3, #modal4, #modal5,#modal7{
     border: orangered 7px solid;
     width: 60vw;
     height: 80vh;
@@ -278,6 +330,14 @@ footer{
     height: 100%;
     display: none;
 }
+#modal7{
+    width: 80vw;
+    padding:0px;
+    height: 70vh;
+    padding-top: 0px;
+    box-shadow: 2px 2px 50px black;
+    background-color: white;
+}
 #modal4{
     width: 50vw;
     height: auto;
@@ -288,7 +348,11 @@ footer{
 #fechar, #fechar2{
     font-size: 90px;
     font-family: monospace;
-    height: 50px;
+    height: 30px;
+    width: 30px;
+    margin: 2%;
+    margin-top: -30px;
+    margin-bottom: 60px;
     float: right;
 }
 .coluna{
@@ -297,7 +361,7 @@ footer{
     height: 50px;
     padding: 5px;
 }
-#titu, .titulofun{
+#titu, .titulofun,.titulofun:hover{
     height: 80px;
     font-size: 40px;
     background-color: orangered;
@@ -378,3 +442,139 @@ h4{
     text-align: center;
     box-shadow: 1px 2px 1px 2px rgba(200,100,200,0.3);
 }
+::-webkit-file-upload-button {
+  background: white;
+  width: 87%;
+  border: 2px solid orangered;
+  color: red;
+  font-size: 18px;
+  padding: 1em;
+}
+::-webkit-file-upload-button:hover{
+    background-color: orangered;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+input[type=file]{
+    width: 80%;
+    margin: 20px;
+    height: 60px;
+    color: orangered;
+}
+.formulario{
+    width: 90%;
+    margin-left: 10%
+}
+.tt4{
+    width: 100%;
+    float:left;
+}
+
+.conteinerLocalizacoes{
+    float: left
+    width: 100%;
+    margin-top: 50px;
+}
+
+figure>img{
+    width: 100px;
+    height: 100px;
+}
+
+#conteinerModal10{
+    background-color:rgba(0,0,0,0.9);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    box-sizing: border-box;
+    z-index: 999;
+}
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+#modal10, #modal9{
+    width: 1800px;
+    height: 80%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 20px;
+    box-shadow: 2px 10px 15px 40px blueviolet;
+}
+#modal9{
+    overflow: auto;
+}
+#fechar10{
+    font-size: 100px;
+    color: blueviolet;
+    margin-left: 90px;
+}
+ .conteinerLojas{
+        width: 80%;
+        height: auto;
+        float: left;
+        margin-left: 10%;
+        margin-bottom: 20px;
+    }
+    .conteinerLojas>.titulo{
+        float: left;
+        margin-left: 20px;
+        margin-right: auto;
+    }
+    .loja{
+        width: 100%;
+        float: left;
+        margin-top: 25px;
+        margin-left: auto;
+        height: auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow:  4px 2px 2px 3px rgba(100, 0, 200, 0.6) ;
+        border: 1px solid rgba(100, 0, 200, 0.6);
+
+    }
+    .imagemLoja>.loja1>img, .imagemLoja>.loja3>img{
+        width: 150px;
+        margin-left: 1%;
+        margin-top: 1%;
+        float: left;
+        margin-right: 2%;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }   
+    .loja>.descrisaoLoja{
+        padding: 35px;
+        color: var(--bg-segundario);  
+    }
+    .nomeLoja, .nomeLoja2{
+        width: 100%;
+        height: auto;
+        color: var(--detalhes);
+        font-size: xx-large;
+        text-align: center;
+        font-weight: bolder;
+    }
+    .nomeLoja2{
+        max-width: 60%;
+    }
+    .imagemLoja>.loja2>img{
+        width: 150px;
+        margin-left: 1%;
+        margin-bottom: 1%;
+        float: right;
+        margin-right: 2%;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .loja>.descrisaoLoja2{
+        float: left;
+        width: 80%;
+        padding: 35px;
+    }

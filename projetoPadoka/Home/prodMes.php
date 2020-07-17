@@ -1,5 +1,7 @@
+<link rel="stylesheet" type="text/css" href="style/style.css">
 <div class="produtoMes">
     <div class="produto">
+
         <h1 class="tituloProduro">Produto do Mês</h1>
         <div class="imgProduto">
             <figure class="prodImg"></figure>
